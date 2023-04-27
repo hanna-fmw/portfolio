@@ -66,7 +66,9 @@ export default function Home() {
 									as react-tilt. Includes features such as Login/Logout, Show current balance, as well as Password encryption and JWT authorization.
 									(app not live yet)
 									<div>
-										<a href='#' className='inline-block mb-1 hover:border-b-2 text-gray-800 hover:border-blue-500 text-sm font-medium mt-2'>
+										<a
+											href='https://github.com/hanna-fmw/bank-site-jwt'
+											className='inline-block mb-1 hover:border-b-2 text-gray-800 hover:border-blue-500 text-sm font-medium mt-2'>
 											Link to GitHub
 										</a>
 									</div>
