@@ -68,7 +68,9 @@ export default function Home() {
 									<div>
 										<a
 											href='https://github.com/hanna-fmw/bank-site-jwt'
-											className='inline-block mb-1 hover:border-b-2 text-gray-800 hover:border-blue-500 text-sm font-medium mt-2'>
+											className='inline-block mb-1 hover:border-b-2 text-gray-800 hover:border-blue-500 text-sm font-medium mt-2'
+											target='_blank'
+											rel='noopener noreferrer'>
 											Link to GitHub
 										</a>
 									</div>
