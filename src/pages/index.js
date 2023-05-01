@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import coverImage from '../assets/grid.jpg'
+import coverImage from '../assets/lines.jpg'
 import gitHub from '../assets/github.png'
 import linkedIn from '../assets/linkedIn.png'
 import ProfilePicture from '../components/ProfilePicture'
@@ -30,7 +30,7 @@ export default function Home() {
 						<p className='text-xs text-bold'>Hanna Jacobsson Hosk</p>
 					</div>
 					<div className='md:mb-16'>
-						<Image className='hidden md:block w-full h-auto shadow-lg' alt='Cover Image' src={coverImage} />
+						<Image className='hidden md:block w-full md:h-[450px] lg:h-[600px] shadow-lg' alt='Cover Image' src={coverImage} />
 					</div>
 				</div>
 
