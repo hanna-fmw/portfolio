@@ -196,6 +196,16 @@ export default function Home() {
 								{isOpen5 && <Image className='w-auto h-[350px] shadow-lg' alt='Project1' src={cv} />}
 							</div>
 						</div>
+						<div>
+							<div className={`${styles.card} p-6 flex flex-col items-center justify-center bg-gray-400 text-white`}>
+								<h4 className='mb-4 self-start text-3xl leading-tight'>In Progress...</h4>
+								<p>
+									Team Project (scrum): Building a Student Portal for Chas Academy in a team consisting of frontend developer, DevOps and UX designer
+									students, using tools such as Next.js (with protected routing, Context API, etc.), Firebase (Firestore and Firebase Authentication),
+									SendGrid, CSS/Tailwind, Figma, GitLab, Taiga, Trello, etc.CV Page in HTML, CSS and Vanilla JS. Desktop-only version.
+								</p>
+							</div>
+						</div>
 					</div>
 				</section>
 			</Fade>
