@@ -43,8 +43,7 @@ export default function Home() {
 							problem-solving skills, I have found my niche in frontend development. While currently focusing on technologies such as Tailwind,
 							JavaScript, React, React Native, Next.js and Node.js, as well as some basic MySQL, I'm also looking forward to exploring AI, machine
 							learning and other emerging tools. UX/UI and interaction design is another area that I´m excited to explore further, where I get the
-							opportunity to put into practice my knowledge in neuroscience and psychology, including cognitive psychology. Find my LinkedIn link
-							below and check back soon for my GitHub link once I've added more projects.
+							opportunity to put into practice my knowledge in neuroscience and psychology, including cognitive psychology.
 						</p>
 						<ProfilePicture />
 					</div>
@@ -202,7 +201,7 @@ export default function Home() {
 								<p>
 									Team Project (scrum): Building a Student Portal for Chas Academy in a team consisting of frontend developer, DevOps and UX designer
 									students, using tools such as Next.js (with protected routing, Context API, etc.), Firebase (Firestore and Firebase Authentication),
-									SendGrid, CSS/Tailwind, Figma, GitLab, Taiga, Trello, etc.CV Page in HTML, CSS and Vanilla JS. Desktop-only version.
+									SendGrid, CSS/Tailwind, Figma, GitLab, Taiga, Trello, etc.
 								</p>
 							</div>
 						</div>
