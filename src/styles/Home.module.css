@@ -17,6 +17,11 @@
 	animation: emerge 1s forwards;
 }
 
+.one {
+	background-color: #15161a;
+	background-image: -webkit-linear-gradient(-70deg, #f3f5f8 50%, #fff 50%);
+}
+
 @keyframes emerge {
 	from {
 		transform: scale(0.95);

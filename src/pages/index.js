@@ -23,10 +23,10 @@ export default function Home() {
 
 	return (
 		<>
-			<section className='pl-5 pr-5 md:pl-16 md:pr-16 lg:pl-24 lg:pr-24'>
+			<section className='pl-5 pr-5 md:pl-12 md:pr-12 lg:pl-16 lg:pr-16'>
 				<div>
 					<div className='flex-col md:flex-row flex items-baseline md:justify-between mt-16 mb-4 md:mb-10 lg:mb-12'>
-						<h1 className='text-6xl md:text-8xl font-bold tracking-tighter leading-tight'>Portfolio.</h1>
+						<h1 className='text-6xl text-[#16151A] md:text-8xl font-bold tracking-tighter leading-tight'>Portfolio.</h1>
 						<p className='text-xs text-bold'>Hanna Jacobsson Hosk</p>
 					</div>
 					<div className='md:mb-16'>
@@ -35,7 +35,7 @@ export default function Home() {
 				</div>
 
 				<div className='mb-20 md:grid md:grid-cols-2 md:gap-x-16 lg:gap-x-10 md:mb-44 md:mt-16'>
-					<h3 className='mb-4 text-4xl md:text-5xl lg:text-5xl leading-tight'>Freelance Translator and Aspiring Frontend Developer</h3>
+					<h3 className='mb-4 text-[#16151A] text-4xl md:text-5xl lg:text-5xl leading-tight'>Freelance Translator and Aspiring Frontend Developer</h3>
 
 					<div>
 						<p className='mb-4 md:text-sm leading-relaxed'>
@@ -52,11 +52,11 @@ export default function Home() {
 
 			<Fade top distance='20%' duration={1000}>
 				<section className='mt-20 md:mt-20 lg:mt-40'>
-					<h2 className='mb-2 md:mb-12 text-4xl md:text-6xl font-bold tracking-tighter leading-tight pl-5 pr-5 md:pl-24 md:pr-24 lg:pl-24 lg:pr-24'>
+					<h2 className='mb-2 md:mb-12 text-[#16151A] text-4xl md:text-6xl font-bold tracking-tighter leading-tight pl-5 pr-5 md:pl-24 md:pr-24 lg:pl-24 lg:pr-24'>
 						A Couple of Projects
 					</h2>
 
-					<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-24 md:text-sm md:bg-[#f5f5f6] pl-5 pr-5 md:pl-24 md:pr-24 lg:pr-20 lg:pl-20 py-10'>
+					<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-24 md:text-sm md:bg-[#f3f5f8] pl-5 pr-5 md:pl-24 md:pr-24 lg:pr-20 lg:pl-20 py-10'>
 						<div>
 							<div className={`${styles.card} p-6 flex flex-col items-center justify-center bg-white`}>
 								<h4 className='mb-4 self-start text-3xl leading-tight'>Bank App</h4>
@@ -196,7 +196,7 @@ export default function Home() {
 							</div>
 						</div>
 						<div>
-							<div className={`${styles.card} p-6 flex flex-col items-center justify-center bg-gray-400 text-white`}>
+							<div className={`${styles.card} p-6 flex flex-col items-center justify-center bg-[#16151A] text-white`}>
 								<h4 className='mb-4 self-start text-3xl leading-tight'>In Progress...</h4>
 								<p>
 									Team Project (scrum): Building a Student Portal for Chas Academy in a team consisting of frontend developer, DevOps and UX designer
@@ -209,11 +209,15 @@ export default function Home() {
 				</section>
 			</Fade>
 
-			<section className='pl-5 pr-5 md:pl-24 md:pr-24 lg:pr-24 mt-12 md:mt-20 lg:mt-40'>
-				<h2 className='text-4xl md:text-6xl font-bold tracking-tighter leading-tight'>Currently Learning...</h2>
-				<h3 className='mb-8 mt-4 md:mt-4 md:mb-12 text-xs font-semibold'>(Interactive 3D Spheres - spin them!)</h3>
+			<section className='mt-12 md:mt-20 lg:mt-40'>
+				<h2 className='mb-2 md:mb-12 text-[#16151A] text-4xl md:text-6xl font-bold tracking-tighter leading-tight pl-5 pr-5 md:pl-24 md:pr-24 lg:pl-24 lg:pr-24'>
+					Currently Learning...
+				</h2>
+				<h3 className='mb-8 mt-4 md:mt-4 md:mb-12 text-xs font-semibold pl-5 pr-5 md:pl-24 md:pr-24 lg:pl-24 lg:pr-24'>
+					(Interactive 3D Spheres - spin them!)
+				</h3>
 				{/* <LogoSpheres /> */}
-				<div className='grid grid-cols-2 md:grid-cols-3 md:pl-24 md:pr-24 md:gap-20 lg:grid-cols-3 '>
+				<div className={`${styles.one} grid grid-cols-2 md:grid-cols-3 md:pl-24 md:pr-24 md:gap-20 lg:grid-cols-3 pb-32 pt-16`}>
 					<div className='flex flex-col justify-center items-center text-[10px] font-semibold'>
 						<div>
 							<Scene logo='logo/html.png' />
@@ -299,9 +303,9 @@ export default function Home() {
 					</div>
 				</div>
 			</section>
-
+			{/* mt-40 md:mt-52 lg:mt-52 */}
 			<footer>
-				<section className='mt-40 md:mt-52 lg:mt-52 bg-[#FAFAFA] border-t flex justify-between w-full h-[40wh]'>
+				<section className=' bg-[#f3f5f8] border-t flex justify-between w-full h-[40wh]'>
 					<div className='flex flex-col py-14 px-14 md:py-20 text-center md:text-left lg:text-left md:w-[70vw]'>
 						<h3 className='text-2xl md:text-3xl font-bold tracking-tighter leading-tight mb-2'>
 							Built using CSS/Tailwind, React/Next.js, React Three Fiber and libraries such as react-reveal
