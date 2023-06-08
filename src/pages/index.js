@@ -90,23 +90,24 @@ export default function Home() {
 									{!isOpenTodoReactNative ? 'Click for screenshot (carousel)' : 'Close'}
 								</button>
 								{isOpenTodoReactNative ? (
-									<div className='flex flex-row w-64 gap-5 z-20'>
+									<div className='flex flex-row justify-center items-center w-64 gap-5 z-20'>
 										<Carousel
 											autoPlay
 											infiniteLoop={true}
-											interval={1200}
-											transitionTime={500}
+											interval={1400}
+											transitionTime={1000}
 											className='w-64'
 											showIndicators={false}
-											showArrows={false}>
+											showArrows={false}
+											showStatus={false}>
 											<div className='w-52'>
-												<Image alt='Project1' src={front} />
+												<Image alt='Front page' src={front} />
 											</div>
 											<div className='w-52'>
-												<Image alt='Project1' src={addTodo} />
+												<Image alt='Add Todo page' src={addTodo} />
 											</div>
 											<div className='w-52'>
-												<Image alt='Project1' src={details} />
+												<Image alt='Details page' src={details} />
 											</div>
 										</Carousel>
 									</div>
