@@ -3,6 +3,9 @@ import coverImage from '../assets/lines.jpg'
 import gitHub from '../assets/github.png'
 import linkedIn from '../assets/linkedIn.png'
 import ProfilePicture from '../components/ProfilePicture'
+import front from '../assets/todoReactNative/front.png'
+import details from '../assets/todoReactNative/details.png'
+import addTodo from '../assets/todoReactNative/addtodo.png'
 import quiz from '../assets/quiz.png'
 import todo from '../assets/reduxTodo.png'
 import jwt from '../assets/JWTbanking.png'
@@ -13,13 +16,16 @@ import { useState } from 'react'
 import styles from '../styles/Home.module.css'
 import Fade from 'react-reveal/Fade'
 import Scene from '@/components/Scene'
+import { Carousel } from 'react-responsive-carousel'
+import 'react-responsive-carousel/lib/styles/carousel.min.css'
 
 export default function Home() {
-	const [isOpen1, setIsOpen1] = useState(false)
-	const [isOpen2, setIsOpen2] = useState(false)
-	const [isOpen3, setIsOpen3] = useState(false)
-	const [isOpen4, setIsOpen4] = useState(false)
-	const [isOpen5, setIsOpen5] = useState(false)
+	const [isOpenTodoReactNative, setIsOpenTodoReactNative] = useState(false)
+	const [isOpenBank, setIsOpenBank] = useState(false)
+	const [isOpenQuizRedux, setIsOpenQuizRedux] = useState(false)
+	const [isOpenTodoRedux, setIsOpenTodoRedux] = useState(false)
+	const [isOpenMovieAppReact, setIsOpenMovieAppReact] = useState(false)
+	const [isOpenCVPage, setIsOpenCVPage] = useState(false)
 
 	return (
 		<>
@@ -59,7 +65,58 @@ export default function Home() {
 					<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-24 md:text-sm md:bg-[#f3f5f8] pl-5 pr-5 md:pl-24 md:pr-24 lg:pr-20 lg:pl-20 py-10'>
 						<div>
 							<div className={`${styles.card} p-6 flex flex-col items-center justify-center bg-white`}>
-								<h4 className='mb-4 self-start text-3xl leading-tight'>Bank App</h4>
+								<h4 className='self-start text-3xl leading-tight'>Todo App</h4>
+								<span className='mb-4 self-start text-xs text-orange-500'>React Native</span>
+								<div>
+									Todo list built using React Native. Includes features such as navigation with expo-router, scroll view, completed checkbox, detail
+									page, and delete.
+									<div>
+										<a
+											href='https://github.com/hanna-fmw/todo-react-native'
+											className='inline-block mb-1 hover:border-b-2 text-gray-800 hover:border-blue-500 text-sm font-medium mt-2'
+											target='_blank'
+											rel='noopener noreferrer'>
+											Link to GitHub
+										</a>
+									</div>
+								</div>
+							</div>
+
+							<div className='mt-4 mb-4 text-sm'>
+								<div>June 2023</div>
+								<button
+									onClick={() => setIsOpenTodoReactNative(!isOpenTodoReactNative)}
+									className='inline-block mb-1 hover:border-b-2 text-gray-800 hover:border-blue-500 text-sm font-medium'>
+									{!isOpenTodoReactNative ? 'Click for screenshot (carousel)' : 'Close'}
+								</button>
+								{isOpenTodoReactNative ? (
+									<div className='flex flex-row w-64 gap-5 z-20'>
+										<Carousel
+											autoPlay
+											infiniteLoop={true}
+											interval={1200}
+											transitionTime={500}
+											className='w-64'
+											showIndicators={false}
+											showArrows={false}>
+											<div className='w-52'>
+												<Image alt='Project1' src={front} />
+											</div>
+											<div className='w-52'>
+												<Image alt='Project1' src={addTodo} />
+											</div>
+											<div className='w-52'>
+												<Image alt='Project1' src={details} />
+											</div>
+										</Carousel>
+									</div>
+								) : null}
+							</div>
+						</div>
+						<div>
+							<div className={`${styles.card} p-6 flex flex-col items-center justify-center bg-white`}>
+								<h4 className='self-start text-3xl leading-tight'>Bank App</h4>
+								<span className='mb-4 self-start text-xs text-orange-500'>Express, MySQL, JWT</span>
 								<div>
 									Responsive Banking App built using React, React Router, Node.js, Express, JWT, BCrypt, MySQL and Tailwind as well as libraries such
 									as react-tilt. Includes features such as Login/Logout, Show current balance, as well as Password encryption and JWT authorization.
@@ -79,17 +136,18 @@ export default function Home() {
 							<div className='mt-4 mb-4 text-sm'>
 								<div>April 2023</div>
 								<button
-									onClick={() => setIsOpen1(!isOpen1)}
+									onClick={() => setIsOpenBank(!isOpenBank)}
 									className='inline-block mb-1 hover:border-b-2 text-gray-800 hover:border-blue-500 text-sm font-medium'>
-									{!isOpen1 ? 'Click for screenshot' : 'Close'}
+									{!isOpenBank ? 'Click for screenshot' : 'Close'}
 								</button>
-								{isOpen1 && <Image className='h-[350px] w-auto shadow-lg' alt='Project1' src={jwt} />}
+								{isOpenBank && <Image className='h-[350px] w-auto shadow-lg' alt='Project1' src={jwt} />}
 							</div>
 						</div>
 
 						<div>
 							<div className={`${styles.card} p-6 flex flex-col items-center justify-center bg-white`}>
-								<h4 className='mb-4 self-start text-3xl leading-tight'>Quiz App</h4>
+								<h4 className='self-start text-3xl leading-tight'>Quiz App</h4>
+								<span className='mb-4 self-start text-xs text-orange-500'>React, Redux Toolkit</span>
 								<div>
 									Quiz App built using React, Redux Toolkit and Tailwind. Includes Settings screen, Quiz screens and Final screen, and features such
 									as adding questions and answers, reset, counter and final score.
@@ -108,17 +166,18 @@ export default function Home() {
 							<div className='mt-4 text-sm'>
 								<div>March 2023</div>
 								<button
-									onClick={() => setIsOpen2(!isOpen2)}
+									onClick={() => setIsOpenQuizRedux(!isOpenQuizRedux)}
 									className='inline-block mb-1 hover:border-b-2 text-gray-800 hover:border-blue-500 text-sm font-medium'>
-									{!isOpen2 ? 'Click for screenshot' : 'Close'}
+									{!isOpenQuizRedux ? 'Click for screenshot' : 'Close'}
 								</button>
-								{isOpen2 && <Image className='w-auto h-[350px] shadow-lg' alt='Project1' src={quiz} />}
+								{isOpenQuizRedux && <Image className='w-auto h-[350px] shadow-lg' alt='Project1' src={quiz} />}
 							</div>
 						</div>
 
 						<div>
 							<div className={`${styles.card} p-6 flex flex-col items-center justify-center bg-white`}>
-								<h4 className='mb-4 self-start text-3xl leading-tight'>Todo List</h4>
+								<h4 className='self-start text-3xl leading-tight'>Todo List</h4>
+								<span className='mb-4 self-start text-xs text-orange-500'>React, Redux Toolkit</span>
 								<p>
 									Basic CRUD app with add, update, delete and undo actions. Built using React, Tailwind and Redux Toolkit.
 									<br />
@@ -134,17 +193,18 @@ export default function Home() {
 							<div className='mt-4 mb-4 text-sm'>
 								<div>February 2023</div>
 								<button
-									onClick={() => setIsOpen3(!isOpen3)}
+									onClick={() => setIsOpenTodoRedux(!isOpenTodoRedux)}
 									className='inline-block mb-1 hover:border-b-2 text-gray-800 hover:border-blue-500 text-sm font-medium'>
-									{!isOpen3 ? 'Click for screenshot' : 'Close'}
+									{!isOpenTodoRedux ? 'Click for screenshot' : 'Close'}
 								</button>
-								{isOpen3 && <Image className='w-auto h-[350px]  shadow-lg' alt='Project1' src={todo} />}
+								{isOpenTodoRedux && <Image className='w-auto h-[350px]  shadow-lg' alt='Project1' src={todo} />}
 							</div>
 						</div>
 
 						<div>
 							<div className={`${styles.card} p-6 flex flex-col items-center justify-center bg-white`}>
-								<h4 className='mb-4 self-start text-3xl leading-tight'>Movie App</h4>
+								<h4 className='self-start text-3xl leading-tight'>Movie App</h4>
+								<span className='mb-4 self-start text-xs text-orange-500'>React</span>
 								<p>
 									Movie search app built using Tailwind, React and omdb API. Includes Search based on movie title.
 									<br />
@@ -161,17 +221,18 @@ export default function Home() {
 							<div className='mt-4 mb-4 text-sm'>
 								<div>February 2023</div>
 								<button
-									onClick={() => setIsOpen4(!isOpen4)}
+									onClick={() => setIsOpenMovieAppReact(!isOpenMovieAppReact)}
 									className='inline-block mb-1 hover:border-b-2 text-gray-800 hover:border-blue-500 text-sm font-semibold'>
-									{!isOpen4 ? 'Click for screenshot' : 'Close'}
+									{!isOpenMovieAppReact ? 'Click for screenshot' : 'Close'}
 								</button>
-								{isOpen4 && <Image className='w-auto h-[350px] shadow-lg' alt='Project1' src={movies} />}
+								{isOpenMovieAppReact && <Image className='w-auto h-[350px] shadow-lg' alt='Project1' src={movies} />}
 							</div>
 						</div>
 
 						<div>
 							<div className={`${styles.card} p-6 flex flex-col items-center justify-center bg-white`}>
-								<h4 className='mb-4 self-start text-3xl leading-tight'>CV Page</h4>
+								<h4 className='self-start text-3xl leading-tight'>CV Page</h4>
+								<span className='mb-4 self-start text-xs text-orange-500'>HTML, CSS, Vanilla JS</span>
 								<p>
 									CV Page in HTML, CSS and Vanilla JS. Desktop-only version.
 									<br />
@@ -188,11 +249,11 @@ export default function Home() {
 							<div className='mt-4 mb-4 text-sm'>
 								<div>November 2022</div>
 								<button
-									onClick={() => setIsOpen5(!isOpen5)}
+									onClick={() => setIsOpenCVPage(!isOpenCVPage)}
 									className='inline-block mb-1 hover:border-b-2 text-gray-800 hover:border-blue-500 text-sm font-semibold'>
-									{!isOpen5 ? 'Click for screenshot' : 'Close'}
+									{!isOpenCVPage ? 'Click for screenshot' : 'Close'}
 								</button>
-								{isOpen5 && <Image className='w-auto h-[350px] shadow-lg' alt='Project1' src={cv} />}
+								{isOpenCVPage && <Image className='w-auto h-[350px] shadow-lg' alt='Project1' src={cv} />}
 							</div>
 						</div>
 						<div>
