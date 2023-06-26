@@ -29,7 +29,7 @@ function Scene({ logo }) {
 			<Suspense fallback={null}>
 				<Sphere logo={logo} />
 			</Suspense>
-			<OrbitControls autoRotate autoRotateSpeed={25} enableZoom={false} />
+			<OrbitControls autoRotate autoRotateSpeed={50} enableZoom={false} />
 		</Canvas>
 	)
 }

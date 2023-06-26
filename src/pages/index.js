@@ -3,13 +3,29 @@ import coverImage from '../assets/lines.jpg'
 import gitHub from '../assets/github.png'
 import linkedIn from '../assets/linkedIn.png'
 import ProfilePicture from '../components/ProfilePicture'
-import front from '../assets/todoReactNative/front.png'
-import details from '../assets/todoReactNative/details.png'
-import addTodo from '../assets/todoReactNative/addtodo.png'
-import quiz from '../assets/quiz.png'
+
+import gameFront from '../assets/gameAppReactNative/front.png'
+import gameDetails from '../assets/gameAppReactNative/gameDetails.png'
+import gameGenres from '../assets/gameAppReactNative/genres.png'
+import gameSearch from '../assets/gameAppReactNative/search.png'
+
+import chasLanding from '../assets/chasChallenge/chasLanding.png'
+import chasMember from '../assets/chasChallenge/chasMember.png'
+import chasShop from '../assets/chasChallenge/chasShop.png'
+
+import todoFront from '../assets/todoReactNative/todoFront.png'
+import todoDetails from '../assets/todoReactNative/todoDetails.png'
+import todoAdd from '../assets/todoReactNative/todoAdd.png'
+
+import quizFront from '../assets/quizRedux/quizFront.png'
+import quizQuestion from '../assets/quizRedux/quizQuestion.png'
+import quizResults from '../assets/quizRedux/quizResults.png'
+
+import cv from '../assets/cvPage/cv.png'
+
 import todo from '../assets/reduxTodo.png'
 import jwt from '../assets/JWTbanking.png'
-import cv from '../assets/cv.png'
+
 import movies from '../assets/movies.png'
 import LogoSpheres from '@/components/LogoSpheres'
 import { useState } from 'react'
@@ -20,6 +36,8 @@ import { Carousel } from 'react-responsive-carousel'
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
 
 export default function Home() {
+	const [isOpenGameAppReactNative, setIsOpenGameAppReactNative] = useState(false)
+	const [isOpenChasChallenge, setIsOpenChasChallenge] = useState(false)
 	const [isOpenTodoReactNative, setIsOpenTodoReactNative] = useState(false)
 	const [isOpenBank, setIsOpenBank] = useState(false)
 	const [isOpenQuizRedux, setIsOpenQuizRedux] = useState(false)
@@ -56,65 +74,173 @@ export default function Home() {
 				</div>
 			</section>
 
-			<Fade top distance='20%' duration={1000}>
-				<section className='mt-20 md:mt-20 lg:mt-40'>
-					<h2 className='mb-2 md:mb-12 text-[#16151A] text-4xl md:text-6xl font-bold tracking-tighter leading-tight pl-5 pr-5 md:pl-24 md:pr-24 lg:pl-24 lg:pr-24'>
-						A Couple of Projects
-					</h2>
+			<section className='mt-20 md:mt-20 lg:mt-40'>
+				<h2 className='mb-2 md:mb-12 text-[#16151A] text-4xl md:text-6xl font-bold tracking-tighter leading-tight pl-5 pr-5 md:pl-24 md:pr-24 lg:pl-24 lg:pr-24'>
+					A Couple of Projects
+				</h2>
 
-					<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-24 md:text-sm md:bg-[#f3f5f8] pl-5 pr-5 md:pl-24 md:pr-24 lg:pr-20 lg:pl-20 py-10'>
-						<div>
-							<div className={`${styles.card} p-6 flex flex-col items-center justify-center bg-white`}>
-								<h4 className='self-start text-3xl leading-tight'>Todo App</h4>
-								<span className='mb-4 self-start text-xs text-orange-500'>React Native</span>
+				{/* Projects */}
+				{/* <Fade top duration={800} fraction='0.1'> */}
+				<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-24 md:text-sm md:bg-[#f3f5f8] pl-5 pr-5 md:pl-24 md:pr-24 lg:pr-20 lg:pl-20 py-10'>
+					{/* Game App React Native */}
+					<div>
+						<div className={`${styles.card} p-6 flex flex-col items-center justify-center bg-white`}>
+							<h4 className='self-start text-3xl leading-tight'>Game App</h4>
+							<span className='mb-4 self-start text-xs text-gray-500'>React Native</span>
+							<div>
+								Game Lookup app built using React Native. Includes features such as navigation with react-native-navigation, scroll views, animations,
+								API calls using axios, share screenshot (via email, sms etc.), search, search on YouTube, favourite button, game/genres overview, game
+								detail pages, search page.
 								<div>
-									Todo list built using React Native. Includes features such as navigation with expo-router, scroll view, completed checkbox, detail
-									page, and delete.
-									<div>
-										<a
-											href='https://github.com/hanna-fmw/todo-react-native'
-											className='inline-block mb-1 hover:border-b-2 text-gray-800 hover:border-blue-500 text-sm font-medium mt-2'
-											target='_blank'
-											rel='noopener noreferrer'>
-											Link to GitHub
-										</a>
-									</div>
+									<a
+										href='https://github.com/hanna-fmw/react-native-game-app.git'
+										className='inline-block mb-1 hover:border-b-2 text-gray-800 hover:border-blue-500 text-sm font-medium mt-2'
+										target='_blank'
+										rel='noopener noreferrer'>
+										Link to GitHub
+									</a>
 								</div>
 							</div>
+						</div>
 
-							<div className='mt-4 mb-4 text-sm'>
-								<div>June 2023</div>
-								<button
-									onClick={() => setIsOpenTodoReactNative(!isOpenTodoReactNative)}
-									className='inline-block mb-1 hover:border-b-2 text-gray-800 hover:border-blue-500 text-sm font-medium'>
-									{!isOpenTodoReactNative ? 'Click for screenshot (carousel)' : 'Close'}
-								</button>
-								{isOpenTodoReactNative ? (
-									<div className='flex flex-row justify-center items-center w-64 gap-5 z-20'>
-										<Carousel
-											autoPlay
-											infiniteLoop={true}
-											interval={1400}
-											transitionTime={1000}
-											className='w-64'
-											showIndicators={false}
-											showArrows={false}
-											showStatus={false}>
-											<div className='w-52'>
-												<Image alt='Front page' src={front} />
-											</div>
-											<div className='w-52'>
-												<Image alt='Add Todo page' src={addTodo} />
-											</div>
-											<div className='w-52'>
-												<Image alt='Details page' src={details} />
-											</div>
-										</Carousel>
-									</div>
-								) : null}
+						<div className='mt-4 mb-4 text-sm'>
+							<div>June 2023</div>
+							<button
+								onClick={() => setIsOpenGameAppReactNative(!isOpenGameAppReactNative)}
+								className='inline-block mb-1 hover:border-b-2 text-gray-800 hover:border-blue-500 text-sm font-medium'>
+								{!isOpenGameAppReactNative ? 'Click for screenshot (carousel)' : 'Close'}
+							</button>
+							{isOpenGameAppReactNative ? (
+								<div className='flex flex-row justify-center items-center w-64 gap-5 z-20'>
+									<Carousel
+										autoPlay
+										stopOnHover={false}
+										infiniteLoop={true}
+										interval={1400}
+										transitionTime={1000}
+										className='w-64'
+										showIndicators={false}
+										showArrows={false}
+										showStatus={false}>
+										<div className='w-52'>
+											<Image alt='Game overview page' src={gameFront} className='rounded-3xl' />
+										</div>
+										<div className='w-52'>
+											<Image alt='Game details page' src={gameDetails} className='rounded-3xl' />
+										</div>
+										<div className='w-52'>
+											<Image alt='Game genre page' src={gameGenres} className='rounded-3xl' />
+										</div>
+										<div className='w-52'>
+											<Image alt='Game search page' src={gameSearch} className='rounded-3xl' />
+										</div>
+									</Carousel>
+								</div>
+							) : null}
+						</div>
+					</div>
+					{/* Chas Challenge */}
+					<div>
+						<div className={`${styles.card} p-6 flex flex-col items-center justify-center bg-white`}>
+							<h4 className='self-start text-3xl leading-tight'>Chas Academy Student Union Site</h4>
+							<span className='mb-4 self-start text-xs text-gray-500'>Next.js</span>
+							<div>
+								Team Project (scrum): Building a Student Portal for Chas Academy in a team consisting of frontend developer, DevOps and UX designer
+								students, using tools such as Next.js (with protected routing, Context API, etc.), Firebase (Firestore and Firebase Authentication),
+								CSS/Tailwind, Figma, GitLab, Taiga, Trello, etc. (site not live yet)
 							</div>
 						</div>
-						<div>
+
+						<div className='mt-4 mb-4 text-sm'>
+							<div>June 2023</div>
+							<button
+								onClick={() => setIsOpenChasChallenge(!isOpenChasChallenge)}
+								className='inline-block mb-1 hover:border-b-2 text-gray-800 hover:border-blue-500 text-sm font-medium'>
+								{!isOpenChasChallenge ? 'Click for screenshot (carousel)' : 'Close'}
+							</button>
+							{isOpenChasChallenge ? (
+								<div className='flex flex-row justify-center items-center w-64 gap-5 z-20'>
+									<Carousel
+										autoPlay
+										stopOnHover={false}
+										infiniteLoop={true}
+										interval={1400}
+										transitionTime={1000}
+										className='w-64'
+										showIndicators={false}
+										showArrows={false}
+										showStatus={false}>
+										<div className='w-52'>
+											<Image alt='Landing page' src={chasLanding} className='rounded-3xl' />
+										</div>
+										<div className='w-52'>
+											<Image alt='Member signup page' src={chasMember} className='rounded-3xl' />
+										</div>
+										<div className='w-52'>
+											<Image alt='Web shop page' src={chasShop} className='rounded-3xl' />
+										</div>
+									</Carousel>
+								</div>
+							) : null}
+						</div>
+					</div>
+
+					{/* Todo App React Native */}
+					<div>
+						<div className={`${styles.card} p-6 flex flex-col items-center justify-center bg-white`}>
+							<h4 className='self-start text-3xl leading-tight'>Todo App</h4>
+							<span className='mb-4 self-start text-xs text-gray-500'>React Native</span>
+							<div>
+								Todo app built using React Native. Includes features such as navigation with expo-router, scroll view, completed checkbox, detail
+								page, and delete.
+								<div>
+									<a
+										href='https://github.com/hanna-fmw/todo-react-native'
+										className='inline-block mb-1 hover:border-b-2 text-gray-800 hover:border-blue-500 text-sm font-medium mt-2'
+										target='_blank'
+										rel='noopener noreferrer'>
+										Link to GitHub
+									</a>
+								</div>
+							</div>
+						</div>
+
+						<div className='mt-4 mb-4 text-sm'>
+							<div>June 2023</div>
+							<button
+								onClick={() => setIsOpenTodoReactNative(!isOpenTodoReactNative)}
+								className='inline-block mb-1 hover:border-b-2 text-gray-800 hover:border-blue-500 text-sm font-medium'>
+								{!isOpenTodoReactNative ? 'Click for screenshot (carousel)' : 'Close'}
+							</button>
+							{isOpenTodoReactNative ? (
+								<div className='flex flex-row justify-center items-center w-64 gap-5 z-20'>
+									<Carousel
+										autoPlay
+										stopOnHover={false}
+										infiniteLoop={true}
+										interval={1400}
+										transitionTime={1000}
+										className='w-64'
+										showIndicators={false}
+										showArrows={false}
+										showStatus={false}>
+										<div className='w-52'>
+											<Image alt='Front page' src={todoFront} className='rounded-3xl' />
+										</div>
+										<div className='w-52'>
+											<Image alt='Add Todo page' src={todoAdd} className='rounded-3xl' />
+										</div>
+										<div className='w-52'>
+											<Image alt='Details page' src={todoDetails} className='rounded-3xl' />
+										</div>
+									</Carousel>
+								</div>
+							) : null}
+						</div>
+					</div>
+
+					{/* Bank App Express, MySQL */}
+					{/* <div>
 							<div className={`${styles.card} p-6 flex flex-col items-center justify-center bg-white`}>
 								<h4 className='self-start text-3xl leading-tight'>Bank App</h4>
 								<span className='mb-4 self-start text-xs text-orange-500'>Express, MySQL, JWT</span>
@@ -143,42 +269,75 @@ export default function Home() {
 								</button>
 								{isOpenBank && <Image className='h-[350px] w-auto shadow-lg' alt='Project1' src={jwt} />}
 							</div>
-						</div>
-
-						<div>
-							<div className={`${styles.card} p-6 flex flex-col items-center justify-center bg-white`}>
-								<h4 className='self-start text-3xl leading-tight'>Quiz App</h4>
-								<span className='mb-4 self-start text-xs text-orange-500'>React, Redux Toolkit</span>
+						</div> */}
+					{/* Quiz App Redux */}
+					<div>
+						<div className={`${styles.card} p-6 flex flex-col items-center justify-center bg-white`}>
+							<h4 className='self-start text-3xl leading-tight'>Quiz App</h4>
+							<span className='mb-4 self-start text-xs text-gray-500'>React, Redux Toolkit</span>
+							<div>
+								Quiz App built using React, Redux Toolkit and Tailwind. Includes Settings screen, Quiz screens and Final screen, and features such as
+								adding questions and answers, reset, counter and final score.
 								<div>
-									Quiz App built using React, Redux Toolkit and Tailwind. Includes Settings screen, Quiz screens and Final screen, and features such
-									as adding questions and answers, reset, counter and final score.
-									<div>
-										<a
-											href='https://quiz-react-redux.vercel.app/'
-											className='inline-block mb-1 hover:border-b-2 text-gray-800 hover:border-blue-500 text-sm font-medium'
-											target='_blank'
-											rel='noopener noreferrer'>
-											Link to live app
-										</a>
-									</div>
+									<a
+										href='https://quiz-react-redux.vercel.app/'
+										className='inline-block mb-1 hover:border-b-2 text-gray-800 hover:border-blue-500 text-sm font-medium'
+										target='_blank'
+										rel='noopener noreferrer'>
+										Link to live app
+									</a>
+								</div>
+								<div>
+									<a
+										href='https://github.com/hanna-fmw/quiz-React-Redux.git'
+										className='inline-block mb-1 hover:border-b-2 text-gray-800 hover:border-blue-500 text-sm font-medium'
+										target='_blank'
+										rel='noopener noreferrer'>
+										Link to GitHub
+									</a>
 								</div>
 							</div>
-
-							<div className='mt-4 text-sm'>
-								<div>March 2023</div>
-								<button
-									onClick={() => setIsOpenQuizRedux(!isOpenQuizRedux)}
-									className='inline-block mb-1 hover:border-b-2 text-gray-800 hover:border-blue-500 text-sm font-medium'>
-									{!isOpenQuizRedux ? 'Click for screenshot' : 'Close'}
-								</button>
-								{isOpenQuizRedux && <Image className='w-auto h-[350px] shadow-lg' alt='Project1' src={quiz} />}
-							</div>
 						</div>
 
-						<div>
+						<div className='mt-4 text-sm'>
+							<div>March 2023</div>
+							<button
+								onClick={() => setIsOpenQuizRedux(!isOpenQuizRedux)}
+								className='inline-block mb-1 hover:border-b-2 text-gray-800 hover:border-blue-500 text-sm font-medium'>
+								{!isOpenQuizRedux ? 'Click for screenshot' : 'Close'}
+							</button>
+							{isOpenQuizRedux ? (
+								<div className='flex flex-row justify-center items-center w-64 gap-5 z-20'>
+									<Carousel
+										autoPlay
+										stopOnHover={false}
+										infiniteLoop={true}
+										interval={1400}
+										transitionTime={1000}
+										className='w-64'
+										showIndicators={false}
+										showArrows={false}
+										showStatus={false}>
+										<div className='w-52'>
+											<Image alt='Front page' src={quizFront} className='rounded-3xl' />
+										</div>
+										<div className='w-52'>
+											<Image alt='Question page' src={quizQuestion} className='rounded-3xl' />
+										</div>
+										<div className='w-52'>
+											<Image alt='Results page' src={quizResults} className='rounded-3xl' />
+										</div>
+									</Carousel>
+								</div>
+							) : null}
+						</div>
+					</div>
+
+					{/* Todo Redux */}
+					{/* <div>
 							<div className={`${styles.card} p-6 flex flex-col items-center justify-center bg-white`}>
 								<h4 className='self-start text-3xl leading-tight'>Todo List</h4>
-								<span className='mb-4 self-start text-xs text-orange-500'>React, Redux Toolkit</span>
+								<span className='mb-4 self-start text-xs text-gray-500'>React, Redux Toolkit</span>
 								<p>
 									Basic CRUD app with add, update, delete and undo actions. Built using React, Tailwind and Redux Toolkit.
 									<br />
@@ -200,8 +359,9 @@ export default function Home() {
 								</button>
 								{isOpenTodoRedux && <Image className='w-auto h-[350px]  shadow-lg' alt='Project1' src={todo} />}
 							</div>
-						</div>
-
+						</div> */}
+					{/* 
+						Movie App React
 						<div>
 							<div className={`${styles.card} p-6 flex flex-col items-center justify-center bg-white`}>
 								<h4 className='self-start text-3xl leading-tight'>Movie App</h4>
@@ -228,54 +388,45 @@ export default function Home() {
 								</button>
 								{isOpenMovieAppReact && <Image className='w-auto h-[350px] shadow-lg' alt='Project1' src={movies} />}
 							</div>
-						</div>
+						</div> */}
 
-						<div>
-							<div className={`${styles.card} p-6 flex flex-col items-center justify-center bg-white`}>
-								<h4 className='self-start text-3xl leading-tight'>CV Page</h4>
-								<span className='mb-4 self-start text-xs text-orange-500'>HTML, CSS, Vanilla JS</span>
-								<p>
-									CV Page in HTML, CSS and Vanilla JS. Desktop-only version.
-									<br />
-									<a
-										href='https://hanna-fmw.github.io/updated-CV-JS/#'
-										target='_blank'
-										rel='noopener noreferrer'
-										className='inline-block mb-1 hover:border-b-2 text-gray-800 hover:border-blue-500 text-sm font-semibold'>
-										Link to live app
-									</a>
-								</p>
-							</div>
-
-							<div className='mt-4 mb-4 text-sm'>
-								<div>November 2022</div>
-								<button
-									onClick={() => setIsOpenCVPage(!isOpenCVPage)}
+					{/* CV Page Vanilla JS */}
+					<div>
+						<div className={`${styles.card} p-6 flex flex-col items-center justify-center bg-white`}>
+							<h4 className='self-start text-3xl leading-tight'>CV Page</h4>
+							<span className='mb-4 self-start text-xs text-gray-500'>HTML, CSS, Vanilla JS</span>
+							<p>
+								CV Page in HTML, CSS and Vanilla JS. Desktop-only version.
+								<br />
+								<a
+									href='https://hanna-fmw.github.io/updated-CV-JS/#'
+									target='_blank'
+									rel='noopener noreferrer'
 									className='inline-block mb-1 hover:border-b-2 text-gray-800 hover:border-blue-500 text-sm font-semibold'>
-									{!isOpenCVPage ? 'Click for screenshot' : 'Close'}
-								</button>
-								{isOpenCVPage && <Image className='w-auto h-[350px] shadow-lg' alt='Project1' src={cv} />}
-							</div>
+									Link to live page
+								</a>
+							</p>
 						</div>
-						<div>
-							<div className={`${styles.card} p-6 flex flex-col items-center justify-center bg-[#16151A] text-white`}>
-								<h4 className='mb-4 self-start text-3xl leading-tight'>In Progress...</h4>
-								<p>
-									Team Project (scrum): Building a Student Portal for Chas Academy in a team consisting of frontend developer, DevOps and UX designer
-									students, using tools such as Next.js (with protected routing, Context API, etc.), Firebase (Firestore and Firebase Authentication),
-									SendGrid, CSS/Tailwind, Figma, GitLab, Taiga, Trello, etc.
-								</p>
-							</div>
+
+						<div className='mt-4 mb-4 text-sm'>
+							<div>November 2022</div>
+							<button
+								onClick={() => setIsOpenCVPage(!isOpenCVPage)}
+								className='inline-block mb-1 hover:border-b-2 text-gray-800 hover:border-blue-500 text-sm font-semibold'>
+								{!isOpenCVPage ? 'Click for screenshot' : 'Close'}
+							</button>
+							{isOpenCVPage && <Image className='w-52 shadow-lg rounded-sm' alt='Project1' src={cv} />}
 						</div>
 					</div>
-				</section>
-			</Fade>
+				</div>
+				{/* </Fade> */}
+			</section>
 
 			<section className='mt-12 md:mt-20 lg:mt-40'>
 				<h2 className='mb-2 md:mb-12 text-[#16151A] text-4xl md:text-6xl font-bold tracking-tighter leading-tight pl-5 pr-5 md:pl-24 md:pr-24 lg:pl-24 lg:pr-24'>
 					Currently Learning...
 				</h2>
-				<h3 className='mb-8 mt-4 md:mt-4 md:mb-12 text-xs font-semibold pl-5 pr-5 md:pl-24 md:pr-24 lg:pl-24 lg:pr-24'>
+				<h3 className='mb-2 mt-4 md:mt-4 md:mb-12 text-xs font-semibold pl-5 pr-5 md:pl-24 md:pr-24 lg:pl-24 lg:pr-24'>
 					(Interactive 3D Spheres - spin them!)
 				</h3>
 				{/* <LogoSpheres /> */}
@@ -370,7 +521,7 @@ export default function Home() {
 				<section className=' bg-[#f3f5f8] border-t flex justify-between w-full h-[40wh]'>
 					<div className='flex flex-col py-14 px-14 md:py-20 text-center md:text-left lg:text-left md:w-[70vw]'>
 						<h3 className='text-2xl md:text-3xl font-bold tracking-tighter leading-tight mb-2'>
-							Built using CSS/Tailwind, React/Next.js, React Three Fiber and libraries such as react-reveal
+							Built using CSS/Tailwind, React/Next.js, React Three Fiber and libraries such as React Reveal and React Responsive Carousel
 						</h3>
 						<p className='text-xs font-medium md:text-md lg:text-md text-center md:text-left lg:text-left md:min-h-[200px]'>
 							Layout inspired by various online resources and designs.
