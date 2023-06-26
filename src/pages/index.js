@@ -4,18 +4,18 @@ import gitHub from '../assets/github.png'
 import linkedIn from '../assets/linkedIn.png'
 import ProfilePicture from '../components/ProfilePicture'
 
-import gameFront from '../assets/gameAppReactNative/front.png'
-import gameDetails from '../assets/gameAppReactNative/gameDetails.png'
-import gameGenres from '../assets/gameAppReactNative/genres.png'
-import gameSearch from '../assets/gameAppReactNative/search.png'
+import RNgameFront from '../assets/gameAppReactNative/RNgameFront.png'
+import RNgameDetails from '../assets/gameAppReactNative/RNgameDetails.png'
+import RNgameGenres from '../assets/gameAppReactNative/RNgameGenres.png'
+import RNgameSearch from '../assets/gameAppReactNative/RNgameSearch.png'
 
 import chasLanding from '../assets/chasChallenge/chasLanding.png'
 import chasMember from '../assets/chasChallenge/chasMember.png'
 import chasShop from '../assets/chasChallenge/chasShop.png'
 
-import todoFront from '../assets/todoReactNative/todoFront.png'
-import todoDetails from '../assets/todoReactNative/todoDetails.png'
-import todoAdd from '../assets/todoReactNative/todoAdd.png'
+import RNtodoFront from '../assets/todoReactNative/RNtodoFront.png'
+import RNtodoDetails from '../assets/todoReactNative/RNtodoDetails.png'
+import RNtodoAdd from '../assets/todoReactNative/RNtodoAdd.png'
 
 import quizFront from '../assets/quizRedux/quizFront.png'
 import quizQuestion from '../assets/quizRedux/quizQuestion.png'
@@ -123,16 +123,16 @@ export default function Home() {
 										showArrows={false}
 										showStatus={false}>
 										<div className='w-52'>
-											<Image alt='Game overview page' src={gameFront} className='rounded-3xl' />
+											<Image alt='Game overview page' src={RNgameFront} className='rounded-3xl' />
 										</div>
 										<div className='w-52'>
-											<Image alt='Game details page' src={gameDetails} className='rounded-3xl' />
+											<Image alt='Game details page' src={RNgameDetails} className='rounded-3xl' />
 										</div>
 										<div className='w-52'>
-											<Image alt='Game genre page' src={gameGenres} className='rounded-3xl' />
+											<Image alt='Game genre page' src={RNgameGenres} className='rounded-3xl' />
 										</div>
 										<div className='w-52'>
-											<Image alt='Game search page' src={gameSearch} className='rounded-3xl' />
+											<Image alt='Game search page' src={RNgameSearch} className='rounded-3xl' />
 										</div>
 									</Carousel>
 								</div>
@@ -225,13 +225,13 @@ export default function Home() {
 										showArrows={false}
 										showStatus={false}>
 										<div className='w-52'>
-											<Image alt='Front page' src={todoFront} className='rounded-3xl' />
+											<Image alt='Front page' src={RNtodoFront} className='rounded-3xl' />
 										</div>
 										<div className='w-52'>
-											<Image alt='Add Todo page' src={todoAdd} className='rounded-3xl' />
+											<Image alt='Add Todo page' src={RNtodoAdd} className='rounded-3xl' />
 										</div>
 										<div className='w-52'>
-											<Image alt='Details page' src={todoDetails} className='rounded-3xl' />
+											<Image alt='Details page' src={RNtodoDetails} className='rounded-3xl' />
 										</div>
 									</Carousel>
 								</div>
