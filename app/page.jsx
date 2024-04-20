@@ -27,10 +27,10 @@ export default function Home() {
 					<div className={styles.nav_right}>
 						<div className={styles.nav_portfolio}>
 							Frontend Developer <br />
-							Portfolio / 2024 <br />
+							Portfolio / 2023-2024 <br />
 						</div>
 						<div className={styles.nav_github}>
-							See my GitHub <br />
+							See my <span className={styles.github_navlink}>GitHub</span> <br />
 							(A Work in progress)
 						</div>
 
@@ -80,7 +80,10 @@ export default function Home() {
 						</p>
 					</div>
 
-					{/* <p>Scroll down</p> */}
+					<div className={styles.mouse}>
+						<div className={styles.wheel}></div>
+					</div>
+
 					<div className={styles.svg_scroll}>
 						<svg className={styles.svg_line} width='20' height='21' fill='none' xmlns='http://www.w3.org/2000/svg'>
 							<path d='M10.833 13.977l4.47-4.47 1.179 1.178L10 17.167l-6.482-6.482 1.179-1.178 4.47 4.47V3.833h1.666v10.144z' fill='#777' />
@@ -92,20 +95,20 @@ export default function Home() {
 						<div className={styles.projects_header}>
 							<p>
 								FEATURED <br />
-								PROJECTS (3)
+								PROJECTS (2)
 							</p>
 							<p>
-								ART DIRECTION / <br />
-								WEB3 DEVELOPMENT
+								NEXT.JS / <br />
+								WEB DEVELOPMENT
 							</p>
 						</div>
 						<div className={styles.project}>
-							<h1 className={styles.project_heading}>Unveil - Photography Marketplace</h1>
+							<h1 className={styles.project_heading}>SNOWBOARD RETAILER — FRONTEND FOR WEB SHOP</h1>
 						</div>
 						<div className={styles.btn_container}>
-							<a href='https://www.unveil.art/' target='_blank' rel='noopener noreferrer' class='c-button'>
+							<a href='https://github.com/hanna-fmw/webshop-snowboards' target='_blank' rel='noopener noreferrer' class='c-button'>
 								<button className={styles.visit_btn}>
-									Visit Site
+									Go to repo
 									<svg width='20' height='20' fill='none' xmlns='http://www.w3.org/2000/svg'>
 										<path d='M13.337 7.845l-7.173 7.173-1.178-1.179 7.172-7.172H5.837V5h9.166v9.167h-1.666V7.845z' fill='#777' />
 									</svg>
@@ -125,15 +128,15 @@ export default function Home() {
 								PROJECTS (3) */}
 							</p>
 							<p>
-								ART DIRECTION / <br />
-								CREATIVE DEVELOPMENT
+								NEXT.JS / <br />
+								WEB DEVELOPMENT
 							</p>
 						</div>
 						<div className={styles.project}>
-							<h1 className={styles.project_heading}>Studio Null - radio null rewind 2022</h1>
+							<h1 className={styles.project_heading}>Weather App</h1>
 						</div>
 						<div className={styles.btn_container}>
-							<a href='https://www.unveil.art/' target='_blank' rel='noopener noreferrer' class='c-button'>
+							<a href='https://weather-app-rust-gamma-39.vercel.app/' target='_blank' rel='noopener noreferrer' class='c-button'>
 								<button className={styles.visit_btn}>
 									Visit Site
 									<svg width='20' height='20' fill='none' xmlns='http://www.w3.org/2000/svg'>
@@ -173,9 +176,9 @@ export default function Home() {
 						<div className={styles.skill}>React & Next.js</div>
 						<div className={styles.skill}>React Native</div>
 						<div className={styles.skill}>Node.js & Express</div>
+						<div className={styles.skill}>Prisma, Supabase & Firebase basics</div>
 						<div className={styles.skill}>Git & GitHub</div>
 						<div className={styles.skill}>Squarespace</div>
-						<div className={styles.skill}>Storybook</div>
 						<div className={styles.skill}>UX/UI & Animation (Figma, Framer Motion)</div>
 					</div>
 				</section>
@@ -185,7 +188,7 @@ export default function Home() {
 						<p className={styles.content_description}>
 							Learn, collaborate and contribute. <br />
 							<a href='https://github.com/hanna-fmw' target='_blank' rel='noopener noreferrer'>
-								See my <span className={styles.gitHub_link}>Github</span>
+								See my <span className={styles.social_link}>Github</span>
 							</a>
 						</p>
 					</div>
@@ -198,7 +201,7 @@ export default function Home() {
 							working independently.
 							<br />
 							<a href='https://github.com/hanna-fmw' target='_blank' rel='noopener noreferrer'>
-								See my <span className={styles.github_link}>Github</span>
+								See my <span className={styles.social_link}>Github</span>
 							</a>
 						</p>
 					</div>
@@ -222,23 +225,23 @@ export default function Home() {
 				<footer className={styles.footer}>
 					<div className={styles.email}>
 						<button onClick={copyToClipboard} className={styles.email_btn}>
-							hanna.hosk@gmail.com
+							<span className={styles.email_address}>hanna.hosk@gmail.com</span>
+							<span className={styles.to_copy}>Click To Copy</span>
 						</button>
-						<span className={styles.to_copy}>Click To Copy</span>
 					</div>
 					<div>
 						<a href='https://github.com/hanna-fmw' target='_blank' rel='noopener noreferrer'>
-							<span className={styles.github_link}>GITHUB </span>
+							<span className={styles.social_link}>GITHUB </span>
 						</a>
 					</div>
 					<div>
 						<a href='https://www.linkedin.com/in/hanna-jacobsson-hosk-29a64138/' class='c-button' target='_blank' rel='noopener noreferrer'>
-							<span className={styles.github_link}>LINKEDIN</span>
+							<span className={styles.social_link}>LINKEDIN</span>
 						</a>
 					</div>
 
 					<div>
-						<p class='place'>STOCKHOLM, SWEDEN</p>
+						<span className={styles.place}>STOCKHOLM, SWEDEN</span>
 						<div class='time'>
 							<a
 								class='clock24'
