@@ -1,5 +1,5 @@
 .main {
-	padding: 0.8rem;
+	padding: 1rem;
 }
 
 .nav {
@@ -12,29 +12,33 @@
 
 .nav_left,
 .nav_right {
-	font-size: 1.2rem;
 	text-transform: uppercase;
 	justify-content: space-between;
+	font-family: var(--font-roboto);
+	font-size: 1rem;
 }
 
-.nav_folio,
-.nav_availability {
-	margin-bottom: 2.4rem;
+.nav_portfolio,
+.nav_github {
+	margin-bottom: 2rem;
 }
 
+.visit_btn,
 .contact_btn {
+	display: inline-block;
 	background: transparent;
-	color: #777;
+	color: #aaa;
 	border: 2px solid #777;
 	border-radius: 45px;
 	padding: 5px 20px;
-	font-size: 16px;
+	font-size: 1rem;
 	text-transform: uppercase;
 	cursor: pointer;
 	overflow: hidden;
 	transition: color 0.3s, background 0.3s;
 }
 
+.visit_btn:hover,
 .contact_btn:hover {
 	/* border: 2px solid magenta;
 	color: magenta; */
@@ -45,6 +49,7 @@
 .hero_section {
 	display: flex;
 	flex-direction: column;
+	position: relative;
 }
 
 .hero_title {
@@ -52,35 +57,156 @@
 }
 
 .hero_heading {
-	font-size: 8rem;
+	font-size: 8.5rem;
 	word-break: break-word;
 	letter-spacing: -1px;
 	line-height: 0.9;
 }
 
 .hero_hover.junior {
-	font-size: 3.2rem;
+	/* font-family: var(--font-roboto); */
+	font-size: 2.8rem;
+	line-height: 0.6;
 }
 
 .hero_hover {
 	transition: color 0.2s;
-	/* cursor: none; */
+	cursor: grab;
 }
 
 .hero_hover:hover {
 	color: #ccc;
 }
 
-/* .hero_title {
-	transition: color 0.2s;
-	word-wrap: break-word;
-} */
-
-/* .hero_title .hero_hover:hover {
-	color: #ccc;
-} */
-
 .about {
 	align-self: flex-end;
-	max-width: 50vw;
+	max-width: 70%;
+	font-family: var(--font-roboto);
+	line-height: 1.3;
+	font-size: 1rem;
+}
+
+.first_word {
+	text-transform: uppercase;
+	color: #ccc;
+}
+
+.about_paragraph {
+	margin-bottom: 2.4rem;
+}
+
+.svg_scroll {
+	position: relative;
+	margin-bottom: 2rem;
+}
+
+.svg_line {
+	height: 2px;
+	background: #777;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	display: inline-block;
+	transform-origin: left top;
+}
+
+.projects_header {
+	display: flex;
+	justify-content: space-between;
+	font-family: var(--font-roboto);
+	font-size: 0.8rem;
+}
+
+.project_heading {
+	font-size: 80px;
+	font-family: var(--font-bebasNeue);
+	line-height: 0.9;
+	padding-top: 3.2rem;
+	padding-bottom: 2.4rem;
+	text-align: right;
+}
+
+.btn_container {
+	padding-bottom: 3.2rem;
+	text-align: right;
+}
+
+.content_section {
+	padding-block: 3rem;
+}
+
+.content_title,
+.content_description,
+.interests_description {
+	font-family: var(--font-roboto);
+	line-height: 1.3;
+	font-size: 0.9rem;
+	margin-bottom: 1rem;
+}
+
+.skills_title {
+	font-family: var(--font-roboto);
+	font-size: 0.8rem;
+	margin-bottom: 1rem;
+	line-height: 0.3;
+}
+
+.coding_skills {
+	padding-block: 3rem;
+}
+
+.skills_header {
+	padding-bottom: 1rem;
+}
+
+.skill {
+	font-family: var(--font-roboto);
+	font-size: 0.9rem;
+	padding-block: 1rem;
+	border-top: 1px solid #777;
+	border-bottom: 1px solid #777;
+}
+
+.content_title,
+.github_link {
+	font-family: var(--font-roboto);
+	font-size: 0.8rem;
+	text-transform: uppercase;
+	display: inline-block;
+	transition: color 0.3s, background 0.3s;
+}
+
+.github_link {
+	color: #aaa;
+}
+
+.content_container {
+	padding-block: 1rem;
+}
+
+.github_link:hover {
+	color: greenyellow;
+}
+
+.marquee {
+	font-family: var(--font-bebasNeue);
+	font-size: 5rem;
+}
+
+.footer {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	font-family: var(--font-roboto);
+}
+
+.email {
+	padding-bottom: 2rem;
+}
+
+.to_copy {
+	display: block;
+	text-align: right;
+	font-size: 0.8rem;
 }
