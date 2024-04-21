@@ -1,6 +1,21 @@
 'use client';
 import { useState } from 'react';
 import styles from './page.module.css';
+import { motion } from 'framer-motion';
+
+const skills = [
+	{ id: 1, name: 'HTML' },
+	{ id: 2, name: 'CSS, Tailwind' },
+	{ id: 3, name: 'JavaScript' },
+	{ id: 4, name: 'TypeScript' },
+	{ id: 5, name: 'React & Next.js' },
+	{ id: 6, name: 'React Native' },
+	{ id: 7, name: 'Node.js & Express' },
+	{ id: 8, name: 'Prisma, Supabase & Firebase basics' },
+	{ id: 9, name: 'Git & GitHub' },
+	{ id: 10, name: 'Squarespace' },
+	{ id: 11, name: 'UX/UI & Animation (Figma, Framer Motion)' },
+];
 
 export default function Home() {
 	const [open, setOpen] = useState(false);
@@ -10,10 +25,28 @@ export default function Home() {
 		navigator.clipboard.writeText('hanna.hosk@gmail.com');
 	};
 
+	// const skillVariant = {
+	// 	initial: { y: '50%' },
+	// 	whileInView: { y: '0%' },
+	// 	transition: {
+	// 		duration: 0.8,
+	// 		delay: 0.4,
+	// 		ease: [0, 0.71, 0.2, 1.01],
+	// 	},
+	// };
+
 	return (
 		<>
 			<main className={styles.main}>
-				<nav className={styles.nav}>
+				<motion.nav
+					className={styles.nav}
+					initial={{ y: '-200%' }}
+					animate={{ y: '0%' }}
+					transition={{
+						duration: 0.4,
+						delay: 0.2,
+						ease: [0, 0.71, 0.2, 1.01],
+					}}>
 					<div className={styles.nav_left}>
 						<div className={styles.nav_name}>
 							<span>
@@ -38,8 +71,16 @@ export default function Home() {
 							<span>Contact</span>
 						</button>
 					</div>
-				</nav>
-				<section className={styles.hero_section}>
+				</motion.nav>
+				<motion.section
+					className={styles.hero_section}
+					initial={{ y: '200%' }}
+					animate={{ y: '0%' }}
+					transition={{
+						duration: 0.4,
+						delay: 0.5,
+						ease: [0, 0.71, 0.2, 1.01],
+					}}>
 					<div className={styles.hero_title}>
 						<span className={styles.hero_heading}>
 							<span className={`${styles.hero_hover} ${styles.junior}`}>j</span>
@@ -73,7 +114,7 @@ export default function Home() {
 
 					<div className={styles.about}>
 						<p className={styles.about_paragraph}>
-							<span className={styles.first_word}>About</span>
+							<span className={styles.first_word}>About </span>
 							&nbsp;Hi, I&apos;m Hanna, a junior frontend developer with the ambition to eventually become fullstack. I&apos;m very driven and
 							passionate about learning, creative thinking and problem-solving. While currently focusing on frontend technologies, Node.js/Express and
 							basic Database Management, I&apos;m also very excited to learn more about AI and other emerging tools.
@@ -85,11 +126,25 @@ export default function Home() {
 					</div>
 
 					<div className={styles.svg_scroll}>
-						<svg className={styles.svg_line} width='20' height='21' fill='none' xmlns='http://www.w3.org/2000/svg'>
-							<path d='M10.833 13.977l4.47-4.47 1.179 1.178L10 17.167l-6.482-6.482 1.179-1.178 4.47 4.47V3.833h1.666v10.144z' fill='#777' />
+						<svg viewBox='0 0 100 10' xmlns='http://www.w3.org/2000/svg'>
+							<motion.path
+								initial={{ pathLength: 0 }}
+								// animate={{ pathLength: 1 }}
+								whileInView={{ pathLength: 1 }}
+								viewport={{ once: true }}
+								transition={{
+									duration: 3,
+									ease: 'linear',
+									// repeat: Infinity,
+									// repeatType: 'loop',
+									// repeatDelay: 2,
+								}}
+								// strokeWidth={0.4}
+								d='M 0, 5 L 100, 5'
+							/>
 						</svg>
 					</div>
-				</section>
+				</motion.section>
 				<section>
 					<div className={styles.projects}>
 						<div className={styles.projects_header}>
@@ -102,9 +157,20 @@ export default function Home() {
 								WEB DEVELOPMENT
 							</p>
 						</div>
-						<div className={styles.project}>
-							<h1 className={styles.project_heading}>SNOWBOARD RETAILER — FRONTEND FOR WEB SHOP</h1>
-						</div>
+						<motion.div
+							className={styles.project}
+							initial={{ translateY: 50 }}
+							whileInView={{ translateY: 0 }}
+							viewport={{ once: true }}
+							transition={{
+								duration: 0.4,
+								ease: 'easeIn',
+							}}>
+							<h1 className={styles.project_heading}>
+								SNOWBOARD RETAILER — <br />
+								FRONTEND FOR WEB SHOP
+							</h1>
+						</motion.div>
 						<div className={styles.btn_container}>
 							<a href='https://github.com/hanna-fmw/webshop-snowboards' target='_blank' rel='noopener noreferrer' class='c-button'>
 								<button className={styles.visit_btn}>
@@ -117,24 +183,41 @@ export default function Home() {
 						</div>
 					</div>
 					<div className={styles.svg_scroll}>
-						<svg className={styles.svg_line} width='20' height='21' fill='none' xmlns='http://www.w3.org/2000/svg'>
-							<path d='M10.833 13.977l4.47-4.47 1.179 1.178L10 17.167l-6.482-6.482 1.179-1.178 4.47 4.47V3.833h1.666v10.144z' fill='#777' />
+						<svg viewBox='0 0 100 10' xmlns='http://www.w3.org/2000/svg'>
+							<motion.path
+								initial={{ pathLength: 0 }}
+								whileInView={{ pathLength: 1 }}
+								viewport={{ once: true }}
+								transition={{
+									duration: 3,
+									ease: 'linear',
+								}}
+								d='M 100, 5 L 0, 5' // Start line from right (x = 100) to left side (x = 0)
+							/>
 						</svg>
 					</div>
 					<div className={styles.projects}>
 						<div className={styles.projects_header}>
 							<p>
 								{/* FEATURED <br />
-								PROJECTS (3) */}
+								PROJECTS */}
 							</p>
 							<p>
 								NEXT.JS / <br />
 								WEB DEVELOPMENT
 							</p>
 						</div>
-						<div className={styles.project}>
+						<motion.div
+							className={styles.project}
+							initial={{ translateY: 50 }}
+							whileInView={{ translateY: 0 }}
+							viewport={{ once: true }}
+							transition={{
+								duration: 0.4,
+								ease: 'easeIn',
+							}}>
 							<h1 className={styles.project_heading}>Weather App</h1>
-						</div>
+						</motion.div>
 						<div className={styles.btn_container}>
 							<a href='https://weather-app-rust-gamma-39.vercel.app/' target='_blank' rel='noopener noreferrer' class='c-button'>
 								<button className={styles.visit_btn}>
@@ -147,20 +230,38 @@ export default function Home() {
 						</div>
 					</div>
 					<div className={styles.svg_scroll}>
-						<svg className={styles.svg_line} width='20' height='21' fill='none' xmlns='http://www.w3.org/2000/svg'>
-							<path d='M10.833 13.977l4.47-4.47 1.179 1.178L10 17.167l-6.482-6.482 1.179-1.178 4.47 4.47V3.833h1.666v10.144z' fill='#777' />
+						<svg viewBox='0 0 100 10' xmlns='http://www.w3.org/2000/svg'>
+							<motion.path
+								initial={{ pathLength: 0 }}
+								whileInView={{ pathLength: 1 }}
+								viewport={{ once: true }}
+								transition={{
+									duration: 3,
+									ease: 'linear',
+								}}
+								d='M 0, 5 L 100, 5'
+							/>
 						</svg>
 					</div>
 				</section>
 				<section className={styles.content_section}>
 					<h2 className={styles.content_title}>Interests</h2>
 					<div className={styles.content_description}>
-						Scrolling through and watching videos and tutorials about Web development on YouTube... and family, friends, food and wine of course!
+						Scrolling through and watching YT videos about Web development... and family, friends, food and wine of course!
 					</div>
 				</section>
 				<div className={styles.svg_scroll}>
-					<svg className={styles.svg_line} width='20' height='21' fill='none' xmlns='http://www.w3.org/2000/svg'>
-						<path d='M10.833 13.977l4.47-4.47 1.179 1.178L10 17.167l-6.482-6.482 1.179-1.178 4.47 4.47V3.833h1.666v10.144z' fill='#777' />
+					<svg viewBox='0 0 100 10' xmlns='http://www.w3.org/2000/svg'>
+						<motion.path
+							initial={{ pathLength: 0 }}
+							whileInView={{ pathLength: 1 }}
+							viewport={{ once: true }}
+							transition={{
+								duration: 3,
+								ease: 'linear',
+							}}
+							d='M 100, 5 L 0, 5' // Start line from right (x = 100) to left side (x = 0)
+						/>
 					</svg>
 				</div>
 				<section className={styles.coding_skills}>
@@ -169,17 +270,23 @@ export default function Home() {
 						<h2 className={styles.skills_title}>CURRENTLY LEARNING</h2>
 					</div>
 					<div className={styles.skills_table}>
-						<div className={styles.skill}>HTML</div>
-						<div className={styles.skill}>CSS, Tailwind</div>
-						<div className={styles.skill}>JavaScript</div>
-						<div className={styles.skill}>TypeScript</div>
-						<div className={styles.skill}>React & Next.js</div>
-						<div className={styles.skill}>React Native</div>
-						<div className={styles.skill}>Node.js & Express</div>
-						<div className={styles.skill}>Prisma, Supabase & Firebase basics</div>
-						<div className={styles.skill}>Git & GitHub</div>
-						<div className={styles.skill}>Squarespace</div>
-						<div className={styles.skill}>UX/UI & Animation (Figma, Framer Motion)</div>
+						{skills.map((skill, i) => {
+							return (
+								<motion.div
+									key={skill.id}
+									className={styles.skill}
+									initial={{ translateY: 50 }}
+									whileInView={{ translateY: 0 }}
+									viewport={{ once: true }}
+									transition={{
+										duration: 0.4,
+										delay: i * 0.1,
+										ease: [0, 0.71, 0.2, 1.01],
+									}}>
+									{skill.name}
+								</motion.div>
+							);
+						})}
 					</div>
 				</section>
 				<section>
@@ -208,8 +315,8 @@ export default function Home() {
 				</section>
 				<section>
 					<div className={styles.svg_scroll}>
-						<svg className={styles.svg_line} width='20' height='21' fill='none' xmlns='http://www.w3.org/2000/svg'>
-							<path d='M10.833 13.977l4.47-4.47 1.179 1.178L10 17.167l-6.482-6.482 1.179-1.178 4.47 4.47V3.833h1.666v10.144z' fill='#777' />
+						<svg viewBox='0 0 100 10' xmlns='http://www.w3.org/2000/svg'>
+							<path d='M 0, 5 L 100, 5' />
 						</svg>
 					</div>
 
@@ -217,8 +324,8 @@ export default function Home() {
 						<span>FEEL FREE TO REACH OUT — SAY HELLO</span>
 					</div>
 					<div className={styles.svg_scroll}>
-						<svg className={styles.svg_line} width='20' height='21' fill='none' xmlns='http://www.w3.org/2000/svg'>
-							<path d='M10.833 13.977l4.47-4.47 1.179 1.178L10 17.167l-6.482-6.482 1.179-1.178 4.47 4.47V3.833h1.666v10.144z' fill='#777' />
+						<svg viewBox='0 0 100 10' xmlns='http://www.w3.org/2000/svg'>
+							<path d='M 0, 5 L 100, 5' />
 						</svg>
 					</div>
 				</section>

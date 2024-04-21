@@ -106,7 +106,7 @@
 
 .first_word {
 	text-transform: uppercase;
-	color: #ccc;
+	color: #aaa;
 }
 
 .about_paragraph {
@@ -115,19 +115,9 @@
 }
 
 .svg_scroll {
-	position: relative;
-	margin-bottom: 2rem;
-}
-
-.svg_line {
-	height: 2px;
-	background: #777;
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 100%;
-	display: inline-block;
-	transform-origin: left top;
+	height: min-content;
+	stroke: #777;
+	stroke-width: 0.4;
 }
 
 .projects_header {
@@ -144,6 +134,11 @@
 	padding-top: 3.2rem;
 	padding-bottom: 2.4rem;
 	text-align: right;
+	transition: color 0.3s;
+}
+
+.project_heading:hover {
+	color: greenyellow;
 }
 
 .btn_container {
@@ -189,7 +184,7 @@
 	font-size: 0.9rem;
 	padding-block: 1rem;
 	border-top: 1px solid #777;
-	border-bottom: 1px solid #777;
+	/* border-bottom: 1px solid #777; */
 }
 
 .content_title,
