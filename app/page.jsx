@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import styles from './page.module.css';
 import { motion } from 'framer-motion';
+import Marquee from 'react-fast-marquee';
 
 const skills = [
 	{ id: 1, name: 'HTML' },
@@ -24,16 +25,6 @@ export default function Home() {
 		setOpen(true);
 		navigator.clipboard.writeText('hanna.hosk@gmail.com');
 	};
-
-	// const skillVariant = {
-	// 	initial: { y: '50%' },
-	// 	whileInView: { y: '0%' },
-	// 	transition: {
-	// 		duration: 0.8,
-	// 		delay: 0.4,
-	// 		ease: [0, 0.71, 0.2, 1.01],
-	// 	},
-	// };
 
 	return (
 		<>
@@ -264,54 +255,55 @@ export default function Home() {
 						/>
 					</svg>
 				</div>
-				<section className={styles.coding_skills}>
-					<div className={styles.skills_header}>
-						<h2 className={styles.content_title}>SKILLS &</h2>
-						<h2 className={styles.skills_title}>CURRENTLY LEARNING</h2>
-					</div>
-					<div className={styles.skills_table}>
-						{skills.map((skill, i) => {
-							return (
-								<motion.div
-									key={skill.id}
-									className={styles.skill}
-									initial={{ translateY: 50 }}
-									whileInView={{ translateY: 0 }}
-									viewport={{ once: true }}
-									transition={{
-										duration: 0.4,
-										delay: i * 0.1,
-										ease: [0, 0.71, 0.2, 1.01],
-									}}>
-									{skill.name}
-								</motion.div>
-							);
-						})}
-					</div>
-				</section>
-				<section>
-					<div className={styles.content_container}>
-						<h2 className={styles.content_title}>What I want...</h2>
-						<p className={styles.content_description}>
-							Learn, collaborate and contribute. <br />
-							<a href='https://github.com/hanna-fmw' target='_blank' rel='noopener noreferrer'>
-								See my <span className={styles.social_link}>Github</span>
-							</a>
-						</p>
-					</div>
-				</section>
-				<section>
-					<div className={styles.content_container}>
-						<h2 className={styles.content_title}>What you get...</h2>
-						<p className={styles.content_description}>
-							A passionate and super motivated junior developer with a strong work ethic, who&apos;s just as comfortable collaborating in teams as
-							working independently.
-							<br />
-							<a href='https://github.com/hanna-fmw' target='_blank' rel='noopener noreferrer'>
-								See my <span className={styles.social_link}>Github</span>
-							</a>
-						</p>
-					</div>
+				<section className={styles.section_wrapper}>
+					<section className={styles.coding_skills}>
+						<div className={styles.skills_header}>
+							<h2 className={styles.content_title}>SKILLS &</h2>
+							<h2 className={styles.skills_title}>CURRENTLY LEARNING</h2>
+						</div>
+						<div className={styles.skills_table}>
+							{skills.map((skill, i) => {
+								return (
+									<motion.div
+										key={skill.id}
+										className={styles.skill}
+										initial={{ translateY: 50 }}
+										whileInView={{ translateY: 0 }}
+										viewport={{ once: true }}
+										transition={{
+											duration: 0.4,
+											delay: i * 0.1,
+											ease: [0, 0.71, 0.2, 1.01],
+										}}>
+										{skill.name}
+									</motion.div>
+								);
+							})}
+						</div>
+					</section>
+					<section className={styles.content_wrapper}>
+						<div className={styles.content_container}>
+							<h2 className={styles.content_title}>What I want...</h2>
+							<p className={styles.content_description}>
+								Learn, collaborate and contribute. <br />
+								<a href='https://github.com/hanna-fmw' target='_blank' rel='noopener noreferrer'>
+									See my <span className={styles.social_link}>Github</span>
+								</a>
+							</p>
+						</div>
+
+						<div className={styles.content_container}>
+							<h2 className={styles.content_title}>What you get...</h2>
+							<p className={styles.content_description}>
+								A passionate and super motivated junior developer with a strong work ethic, who&apos;s just as comfortable collaborating in teams as
+								working independently.
+								<br />
+								<a href='https://github.com/hanna-fmw' target='_blank' rel='noopener noreferrer'>
+									See my <span className={styles.social_link}>Github</span>
+								</a>
+							</p>
+						</div>
+					</section>
 				</section>
 				<section>
 					<div className={styles.svg_scroll}>
@@ -320,9 +312,9 @@ export default function Home() {
 						</svg>
 					</div>
 
-					<div className={styles.marquee}>
-						<span>FEEL FREE TO REACH OUT — SAY HELLO</span>
-					</div>
+					<Marquee autoFill pauseOnHover speed={100}>
+						<span className={styles.marquee}>&nbsp;— FEEL FREE TO REACH OUT — SAY HELLO</span>
+					</Marquee>
 					<div className={styles.svg_scroll}>
 						<svg viewBox='0 0 100 10' xmlns='http://www.w3.org/2000/svg'>
 							<path d='M 0, 5 L 100, 5' />
