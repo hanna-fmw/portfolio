@@ -1,19 +1,17 @@
 'use client';
-import { images } from '@/app/images';
 import React from 'react';
-import Image from 'next/image';
-import styles from './snowboardDemo.module.css';
+import { images } from '@/app/projects/weatherAppDemo/weatherImages';
+import styles from './weatherAppDemo.module.css';
 import Screenshots from '@/app/components/screenshots/Screenshots';
 
-const SnowboardDemo = () => {
+const WeatherAppDemo = () => {
 	return (
 		<main className={styles.main}>
 			<header className={styles.header}>
-				<h1>Snowboard Webshop Screenshots</h1>
+				<h1>Weather App Screenshots</h1>
 				<p className={styles.project_description}>
-					Frontend for a web shop. Built using Next.js, CSS and Typescript and tools/libraries such as useContext, Zod, React Hook Form, Downshift.js,
-					Storybook, Framer Motion, localStorage, etc. Includes features such as routing, API calls, filtering, sorting, currency conversion, form
-					validation, etc.
+					Weather App. Built using Next.js, CSS and TypeScript and tools/libraries such as Downshift.js, Framer Motion, localStorage, etc. Includes
+					features such as routing, API calls, sorting, etc.
 				</p>
 			</header>
 			<div className={styles.container}>
@@ -31,4 +29,4 @@ const SnowboardDemo = () => {
 	);
 };
 
-export default SnowboardDemo;
+export default WeatherAppDemo;

@@ -12,19 +12,9 @@
 }
 
 .project_description {
-	text-transform: lowercase;
 	font-family: var(--font-roboto);
 	font-size: 12px;
 }
-
-/* .image {
-	object-fit: contain;
-	width: 100%;
-}
-
-.image_title {
-	display: none;
-} */
 
 .container {
 	display: grid;
@@ -35,7 +25,6 @@
 @media (min-width: 550px) {
 	.main {
 		max-width: 70vw;
-		/* padding: 3.4rem; */
 		margin: 0 auto;
 	}
 
@@ -49,13 +38,4 @@
 	.header {
 		text-align: left;
 	}
-
-	/* .image_title {
-		display: block;
-		text-transform: lowercase;
-		font-family: var(--font-roboto);
-		font-size: 12px;
-		text-align: center;
-		padding-top: 1rem;
-	} */
 }
