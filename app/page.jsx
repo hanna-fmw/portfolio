@@ -59,7 +59,7 @@ export default function Home() {
 						</div>
 
 						<button className={styles.contact_btn}>
-							<span>Contact</span>
+							<a href='mailto:hanna.hosk@gmail.com'>Contact</a>
 						</button>
 					</div>
 				</motion.nav>

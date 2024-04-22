@@ -1,0 +1,19 @@
+.image {
+	object-fit: contain;
+	width: 100%;
+}
+
+.image_title {
+	display: none;
+}
+
+@media (min-width: 550px) {
+	.image_title {
+		display: block;
+		text-transform: lowercase;
+		font-family: var(--font-roboto);
+		font-size: 12px;
+		text-align: center;
+		padding-top: 1rem;
+	}
+}
