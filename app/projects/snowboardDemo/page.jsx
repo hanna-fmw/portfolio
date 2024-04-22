@@ -2,7 +2,7 @@
 import { images } from '@/app/projects/snowboardDemo/snowboardImages';
 import React from 'react';
 import styles from './snowboardDemo.module.css';
-import Screenshots from '@/app/components/screenshots/Screenshots';
+import Image from 'next/image';
 
 const SnowboardDemo = () => {
 	return (
@@ -19,9 +19,8 @@ const SnowboardDemo = () => {
 				{images.map((image, i) => {
 					return (
 						<article key={i} className={styles.img_container}>
-							<Screenshots src={image.src} alt={image.title} width={350} height={350} title={image.title} />
-							{/* <Image src={image.src} alt={image.title} width={350} height={350} className={styles.image} />
-							<p className={styles.image_title}>{image.title}</p> */}
+							<Image src={image.src} alt={image.title} width={350} height={350} className={styles.image} />
+							<p className={styles.image_title}>{image.title}</p>
 						</article>
 					);
 				})}
