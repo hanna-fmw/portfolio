@@ -266,7 +266,7 @@ export default function Home() {
 								PROJECTS */}
 							</p>
 							<p>
-								NEXT.JS / <br />
+								T3 / <br />
 								WEB DEVELOPMENT
 							</p>
 						</div>
