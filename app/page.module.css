@@ -81,7 +81,6 @@
 }
 
 .hero_hover.junior {
-	/* font-family: var(--font-roboto); */
 	font-size: 2.8rem;
 	line-height: 0.6;
 }
@@ -135,10 +134,31 @@
 	text-align: right;
 	transition: color 0.3s;
 	width: 100%;
+	cursor: grab;
 }
 
 .project_heading:hover {
 	color: greenyellow;
+}
+
+.project_subheading {
+	font-family: var(--font-roboto);
+	padding-top: 0;
+	padding-bottom: 1rem;
+	font-size: 1rem;
+	color: #aaa;
+}
+
+.project_text {
+	font-family: var(--font-roboto);
+	padding-top: 0;
+	font-size: 0.8rem;
+}
+
+.btn_wrapper {
+	display: flex;
+	gap: 2rem;
+	justify-content: flex-end;
 }
 
 .btn_container {

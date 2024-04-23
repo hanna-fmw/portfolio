@@ -31,10 +31,29 @@
 	display: none;
 }
 
+.links {
+	padding-top: 1rem;
+	display: flex;
+	gap: 2rem;
+}
+
+.link {
+	text-transform: uppercase;
+	display: inline-block;
+	color: #e1e1e1;
+	transition: color 0.3s, background 0.3s;
+}
+
+.link:hover {
+	text-decoration: underline;
+	text-underline-offset: 6px;
+	/* text-decoration-color: greenyellow; */
+	cursor: pointer;
+}
+
 @media (min-width: 550px) {
 	.main {
-		width: 80vw;
-		margin: 0 auto;
+		width: 70%;
 	}
 
 	.header {

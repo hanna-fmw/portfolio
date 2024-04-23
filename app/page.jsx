@@ -3,6 +3,7 @@ import { useState } from 'react';
 import styles from './page.module.css';
 import { motion } from 'framer-motion';
 import Marquee from 'react-fast-marquee';
+import Link from 'next/link';
 
 const skills = [
 	{ id: 1, name: 'HTML' },
@@ -51,11 +52,10 @@ export default function Home() {
 					<div className={styles.nav_right}>
 						<div className={styles.nav_portfolio}>
 							Frontend Developer <br />
-							Portfolio / 2023-2024 <br />
-						</div>
-						<div className={styles.nav_github}>
-							See my <span className={styles.github_navlink}>GitHub</span> <br />
-							(A Work in progress)
+							<div style={{ paddingTop: '2rem' }}>
+								Portfolio / 2023-2024 <br />
+								(A Work in progress)
+							</div>
 						</div>
 
 						<button className={styles.contact_btn}>
@@ -116,7 +116,7 @@ export default function Home() {
 						<div className={styles.wheel}></div>
 					</div>
 
-					<div className={styles.svg_scroll}>
+					<aside className={styles.svg_scroll}>
 						<svg viewBox='0 0 100 10' xmlns='http://www.w3.org/2000/svg'>
 							<motion.path
 								initial={{ pathLength: 0 }}
@@ -134,10 +134,10 @@ export default function Home() {
 								d='M 0, 5 L 100, 5'
 							/>
 						</svg>
-					</div>
+					</aside>
 				</motion.section>
 				<section>
-					<div className={styles.projects}>
+					<section className={styles.projects}>
 						<div className={styles.projects_header}>
 							<p>
 								FEATURED <br />
@@ -162,18 +162,30 @@ export default function Home() {
 								FRONTEND FOR WEB SHOP
 							</h1>
 						</motion.div>
-						<div className={styles.btn_container}>
-							<a href='https://github.com/hanna-fmw/webshop-snowboards' target='_blank' rel='noopener noreferrer' class='c-button'>
-								<button className={styles.visit_btn}>
-									Go to repo
-									<svg width='20' height='20' fill='none' xmlns='http://www.w3.org/2000/svg'>
-										<path d='M13.337 7.845l-7.173 7.173-1.178-1.179 7.172-7.172H5.837V5h9.166v9.167h-1.666V7.845z' fill='#777' />
-									</svg>
-								</button>
-							</a>
+						<div className={styles.btn_wrapper}>
+							<div className={styles.btn_container}>
+								<a href='https://github.com/hanna-fmw/webshop-snowboards' target='_blank' rel='noopener noreferrer'>
+									<button className={styles.visit_btn}>
+										Go to repo
+										<svg width='20' height='20' fill='none' xmlns='http://www.w3.org/2000/svg'>
+											<path d='M13.337 7.845l-7.173 7.173-1.178-1.179 7.172-7.172H5.837V5h9.166v9.167h-1.666V7.845z' fill='#777' />
+										</svg>
+									</button>
+								</a>
+							</div>
+							<div className={styles.btn_container}>
+								<Link href='/projects/snowboardDemo'>
+									<button className={styles.visit_btn}>
+										Go to demo page
+										<svg width='20' height='20' fill='none' xmlns='http://www.w3.org/2000/svg'>
+											<path d='M13.337 7.845l-7.173 7.173-1.178-1.179 7.172-7.172H5.837V5h9.166v9.167h-1.666V7.845z' fill='#777' />
+										</svg>
+									</button>
+								</Link>
+							</div>
 						</div>
-					</div>
-					<div className={styles.svg_scroll}>
+					</section>
+					<aside className={styles.svg_scroll}>
 						<svg viewBox='0 0 100 10' xmlns='http://www.w3.org/2000/svg'>
 							<motion.path
 								initial={{ pathLength: 0 }}
@@ -186,8 +198,8 @@ export default function Home() {
 								d='M 100, 5 L 0, 5' // Start line from right (x = 100) to left side (x = 0)
 							/>
 						</svg>
-					</div>
-					<div className={styles.projects}>
+					</aside>
+					<section className={styles.projects}>
 						<div className={styles.projects_header}>
 							<p>
 								{/* FEATURED <br />
@@ -209,18 +221,31 @@ export default function Home() {
 							}}>
 							<h1 className={styles.project_heading}>Weather App</h1>
 						</motion.div>
-						<div className={styles.btn_container}>
-							<a href='https://weather-app-rust-gamma-39.vercel.app/' target='_blank' rel='noopener noreferrer' class='c-button'>
-								<button className={styles.visit_btn}>
-									Visit Site
-									<svg width='20' height='20' fill='none' xmlns='http://www.w3.org/2000/svg'>
-										<path d='M13.337 7.845l-7.173 7.173-1.178-1.179 7.172-7.172H5.837V5h9.166v9.167h-1.666V7.845z' fill='#777' />
-									</svg>
-								</button>
-							</a>
+						<div className={styles.btn_wrapper}>
+							<div className={styles.btn_container}>
+								<a href='https://github.com/hanna-fmw/weather-app/' target='_blank' rel='noopener noreferrer'>
+									<button className={styles.visit_btn}>
+										Go to Repo
+										<svg width='20' height='20' fill='none' xmlns='http://www.w3.org/2000/svg'>
+											<path d='M13.337 7.845l-7.173 7.173-1.178-1.179 7.172-7.172H5.837V5h9.166v9.167h-1.666V7.845z' fill='#777' />
+										</svg>
+									</button>
+								</a>
+							</div>
+
+							<div className={styles.btn_container}>
+								<Link href='/projects/weatherAppDemo'>
+									<button className={styles.visit_btn}>
+										Go to demo page
+										<svg width='20' height='20' fill='none' xmlns='http://www.w3.org/2000/svg'>
+											<path d='M13.337 7.845l-7.173 7.173-1.178-1.179 7.172-7.172H5.837V5h9.166v9.167h-1.666V7.845z' fill='#777' />
+										</svg>
+									</button>
+								</Link>
+							</div>
 						</div>
-					</div>
-					<div className={styles.svg_scroll}>
+					</section>
+					<aside className={styles.svg_scroll}>
 						<svg viewBox='0 0 100 10' xmlns='http://www.w3.org/2000/svg'>
 							<motion.path
 								initial={{ pathLength: 0 }}
@@ -233,7 +258,71 @@ export default function Home() {
 								d='M 0, 5 L 100, 5'
 							/>
 						</svg>
-					</div>
+					</aside>
+					<section className={styles.projects}>
+						<div className={styles.projects_header}>
+							<p>
+								{/* FEATURED <br />
+								PROJECTS */}
+							</p>
+							<p>
+								NEXT.JS / <br />
+								WEB DEVELOPMENT
+							</p>
+						</div>
+						<motion.div
+							className={styles.project}
+							initial={{ translateY: 50 }}
+							whileInView={{ translateY: 0 }}
+							viewport={{ once: true }}
+							transition={{
+								duration: 0.4,
+								ease: 'easeIn',
+							}}>
+							<h1 className={styles.project_heading}>Web Shop - fashion store</h1>
+						</motion.div>
+						<p className={` ${styles.project_heading} ${styles.project_subheading}`}>Team project (school assignment)</p>
+						<p className={` ${styles.project_heading} ${styles.project_text}`}>
+							Collaborative school project involving a team of UX, frontend and backend students. Built on the T3 Stack.
+						</p>
+						<div className={styles.btn_wrapper}>
+							<div className={styles.btn_container}>
+								<a href='https://github.com/ChasAcademy-Linnea-Svensson/RebelRunway' target='_blank' rel='noopener noreferrer'>
+									<button className={styles.visit_btn}>
+										Go to Repo
+										<svg width='20' height='20' fill='none' xmlns='http://www.w3.org/2000/svg'>
+											<path d='M13.337 7.845l-7.173 7.173-1.178-1.179 7.172-7.172H5.837V5h9.166v9.167h-1.666V7.845z' fill='#777' />
+										</svg>
+									</button>
+								</a>
+							</div>
+
+							<div className={styles.btn_container}>
+								<a href='https://rebel-runway-webshop-oouc4s4mi-chasacademy-linnea-svensson.vercel.app/' target='_blank' rel='noopener noreferrer'>
+									<button className={styles.visit_btn}>
+										Go to site
+										<svg width='20' height='20' fill='none' xmlns='http://www.w3.org/2000/svg'>
+											<path d='M13.337 7.845l-7.173 7.173-1.178-1.179 7.172-7.172H5.837V5h9.166v9.167h-1.666V7.845z' fill='#777' />
+										</svg>
+									</button>
+								</a>
+							</div>
+						</div>
+					</section>
+					<aside className={styles.svg_scroll}>
+						<svg viewBox='0 0 100 10' xmlns='http://www.w3.org/2000/svg'>
+							<motion.path
+								initial={{ pathLength: 0 }}
+								whileInView={{ pathLength: 1 }}
+								viewport={{ once: true }}
+								transition={{
+									duration: 3,
+									ease: 'linear',
+								}}
+								d='M 100, 5 L 0, 5' // Start line from right (x = 100) to left side (x = 0)
+							/>
+						</svg>
+					</aside>
 				</section>
 				<section className={styles.content_section}>
 					<h2 className={styles.content_title}>Interests</h2>
@@ -241,7 +330,7 @@ export default function Home() {
 						Scrolling through and watching YT videos about Web development... and family, friends, food and wine of course!
 					</div>
 				</section>
-				<div className={styles.svg_scroll}>
+				<aside className={styles.svg_scroll}>
 					<svg viewBox='0 0 100 10' xmlns='http://www.w3.org/2000/svg'>
 						<motion.path
 							initial={{ pathLength: 0 }}
@@ -251,10 +340,10 @@ export default function Home() {
 								duration: 3,
 								ease: 'linear',
 							}}
-							d='M 100, 5 L 0, 5' // Start line from right (x = 100) to left side (x = 0)
+							d='M 0, 5 L 100, 5'
 						/>
 					</svg>
-				</div>
+				</aside>
 				<section className={styles.section_wrapper}>
 					<section className={styles.coding_skills}>
 						<div className={styles.skills_header}>
@@ -306,20 +395,20 @@ export default function Home() {
 					</section>
 				</section>
 				<section>
-					<div className={styles.svg_scroll}>
+					<aside className={styles.svg_scroll}>
 						<svg viewBox='0 0 100 10' xmlns='http://www.w3.org/2000/svg'>
 							<path d='M 0, 5 L 100, 5' />
 						</svg>
-					</div>
+					</aside>
 
 					<Marquee autoFill pauseOnHover speed={100}>
-						<span className={styles.marquee}>&nbsp;— FEEL FREE TO REACH OUT — SAY HELLO</span>
+						<span className={styles.marquee}>&nbsp;— REACH OUT — SAY HELLO</span>
 					</Marquee>
-					<div className={styles.svg_scroll}>
+					<aside className={styles.svg_scroll}>
 						<svg viewBox='0 0 100 10' xmlns='http://www.w3.org/2000/svg'>
 							<path d='M 0, 5 L 100, 5' />
 						</svg>
-					</div>
+					</aside>
 				</section>
 				<footer className={styles.footer}>
 					<div className={styles.email}>
@@ -334,7 +423,7 @@ export default function Home() {
 						</a>
 					</div>
 					<div>
-						<a href='https://www.linkedin.com/in/hanna-jacobsson-hosk-29a64138/' class='c-button' target='_blank' rel='noopener noreferrer'>
+						<a href='https://www.linkedin.com/in/hanna-jacobsson-hosk-29a64138/' target='_blank' rel='noopener noreferrer'>
 							<span className={styles.social_link}>LINKEDIN</span>
 						</a>
 					</div>
