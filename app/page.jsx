@@ -141,7 +141,7 @@ export default function Home() {
 						<div className={styles.projects_header}>
 							<p>
 								FEATURED <br />
-								PROJECTS (2)
+								PROJECTS (4)
 							</p>
 							<p>
 								NEXT.JS / <br />
@@ -161,6 +161,13 @@ export default function Home() {
 								SNOWBOARD RETAILER — <br />
 								FRONTEND FOR WEB SHOP
 							</h1>
+							<p className={styles.project_subheading}>
+								Next.js, TypeScript, Zod, React Hook Form, Storybook, useContext, Downshift.js, Framer Motion, localStorage
+							</p>
+							<p className={styles.project_text}>
+								Frontend for a web shop including features such as routing, filtering, sorting, API-based currency conversion, form validation,
+								animations and visuals, etc. Pure CSS using grid/flexbox for responsiveness and layout purposes.
+							</p>
 
 							<div className={styles.btn_wrapper}>
 								<div className={styles.btn_container}>
@@ -221,6 +228,11 @@ export default function Home() {
 								ease: 'easeIn',
 							}}>
 							<h1 className={styles.project_heading}>Weather App</h1>
+							<p className={styles.project_subheading}>Next.js, TypeScript, API Calls, Framer Motion, Downshift.js, localStorage</p>
+							<p className={styles.project_text}>
+								Responsive Next.js and TypeScript app with smooth page transitions and animations. Conditionally displayed background images based on
+								temperature, city filtering in accessible drop-down, automatic sorting and local storage, etc.{' '}
+							</p>
 
 							<div className={styles.btn_wrapper}>
 								<div className={styles.btn_container}>
@@ -282,9 +294,13 @@ export default function Home() {
 								duration: 0.4,
 								ease: 'easeIn',
 							}}>
-							<h1 className={styles.project_heading}>Photo App with Firebase</h1>
+							<h1 className={styles.project_heading}>Photo App</h1>
+							<p className={`${styles.project_subheading}`}>Next.js, TypeScript, Firebase, Swiper.js, useContext</p>
 
-							<p className={` ${styles.project_heading} ${styles.project_subheading}`}>(in progress)</p>
+							<p className={`${styles.project_text}`}>
+								Responsive photo app with Admin page to uppload photos to Firebase Storage and display these on the main landing page. Also includes
+								image carousel built with Swiper.js. Based on public Figma design.{' '}
+							</p>
 
 							<div className={styles.btn_wrapper}>
 								<div className={styles.btn_container}>
@@ -299,14 +315,14 @@ export default function Home() {
 								</div>
 
 								<div className={styles.btn_container}>
-									<Link href='/projects/photoApp'>
+									<a href='https://photo-site-phi.vercel.app/' target='_blank' rel='noopener noreferrer'>
 										<button className={styles.visit_btn}>
-											Go to demo
+											Go to site
 											<svg width='20' height='20' fill='none' xmlns='http://www.w3.org/2000/svg'>
 												<path d='M13.337 7.845l-7.173 7.173-1.178-1.179 7.172-7.172H5.837V5h9.166v9.167h-1.666V7.845z' fill='#777' />
 											</svg>
 										</button>
-									</Link>
+									</a>
 								</div>
 							</div>
 						</motion.div>
@@ -347,10 +363,10 @@ export default function Home() {
 								duration: 0.4,
 								ease: 'easeIn',
 							}}>
-							<h1 className={styles.project_heading}>Web Shop - fashion store</h1>
+							<h1 className={styles.project_heading}>Web Shop - Fashion Store</h1>
 
-							<p className={` ${styles.project_heading} ${styles.project_subheading}`}>Team project (school assignment)</p>
-							<p className={` ${styles.project_heading} ${styles.project_text}`}>
+							<p className={` ${styles.project_subheading}`}>T3 Stack</p>
+							<p className={` ${styles.project_text}`}>
 								Collaborative school project involving a team of UX, frontend and backend students. Built on the T3 Stack.
 							</p>
 							<div className={styles.btn_wrapper}>
@@ -409,7 +425,7 @@ export default function Home() {
 								duration: 3,
 								ease: 'linear',
 							}}
-							d='M 0, 5 L 100, 5'
+							d='M 100, 5 L 0, 5'
 						/>
 					</svg>
 				</aside>

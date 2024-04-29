@@ -57,8 +57,6 @@
 
 .visit_btn:hover,
 .contact_btn:hover {
-	/* border: 2px solid magenta;
-	color: magenta; */
 	border: 2px solid greenyellow;
 	color: greenyellow;
 }
@@ -122,6 +120,13 @@
 	stroke-width: 0.4;
 }
 
+.project {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	text-align: right;
+}
+
 .projects_header {
 	display: flex;
 	justify-content: space-between;
@@ -134,7 +139,6 @@
 	font-family: var(--font-bebasNeue);
 	padding-top: 3.2rem;
 	padding-bottom: 2.4rem;
-	text-align: right;
 	transition: color 0.3s;
 	width: 100%;
 	cursor: grab;
@@ -148,14 +152,18 @@
 .project_subheading {
 	font-family: var(--font-roboto);
 	padding-top: 0;
-	font-size: 1rem;
+	padding-bottom: 1rem;
+	font-size: 0.8rem;
 	color: #aaa;
+	max-width: 65vw;
 }
 
 .project_text {
 	font-family: var(--font-roboto);
 	padding-top: 0;
-	font-size: 0.8rem;
+	font-size: 0.9rem;
+	max-width: 65vw;
+	padding-bottom: 2rem;
 }
 
 .btn_wrapper {
@@ -366,5 +374,23 @@
 
 	.content_description {
 		font-size: 1rem;
+	}
+
+	.project_subheading {
+		max-width: 55vw;
+	}
+
+	.project_text {
+		max-width: 55vw;
+	}
+}
+
+@media (min-width: 1024px) {
+	.project_subheading {
+		max-width: 45vw;
+	}
+
+	.project_text {
+		max-width: 45vw;
 	}
 }
