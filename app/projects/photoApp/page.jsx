@@ -1,11 +1,10 @@
 'use client';
-import { images } from './snowboardImages';
-import React from 'react';
-import styles from './snowboardDemo.module.css';
+import { images } from './photoScreenshots';
+import styles from './photoApp.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
 
-const SnowboardDemo = () => {
+const PhotoApp = () => {
 	return (
 		<main className={styles.main}>
 			<nav className={styles.links}>
@@ -15,16 +14,17 @@ const SnowboardDemo = () => {
 				<a href='https://github.com/hanna-fmw' target='_blank' rel='noopener noreferrer' className={styles.link}>
 					GitHub
 				</a>
-				<a href='https://github.com/hanna-fmw/webshop-snowboards' target='_blank' rel='noopener noreferrer' className={styles.link}>
+				<a href='https://github.com/hanna-fmw/photo-site' target='_blank' rel='noopener noreferrer' className={styles.link}>
 					Repo
 				</a>
 			</nav>
 			<header className={styles.header}>
-				<h1>Snowboard Webshop Screenshots</h1>
+				<h1>Photo App Webshop Screenshots</h1>
 				<p className={styles.project_description}>
-					Frontend for a web shop. Built using Next.js, CSS and Typescript and tools/libraries such as useContext, Zod, React Hook Form, Downshift.js,
-					Storybook, Framer Motion, localStorage, etc. Includes features such as routing, API calls, filtering, sorting, currency conversion, form
-					validation, etc.
+					Landing page using html, pure css, Next.js and the Swiper.js library. Admin page for accessing and uploading images on the local system to
+					Firebase´s Storage service. Once uploaded, the images are immediately retrieved and displayed to the user on the landing page. useContext
+					was used to make the image list accessible to the whole app. (To do: make /admin a protected route and add delete functionality, improve
+					design/responsiveness)
 				</p>
 			</header>
 			<div className={styles.container}>
@@ -41,4 +41,4 @@ const SnowboardDemo = () => {
 	);
 };
 
-export default SnowboardDemo;
+export default PhotoApp;

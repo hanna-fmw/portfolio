@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { images } from '@/app/projects/weatherAppDemo/weatherImages';
+import { images } from './weatherImages';
 import styles from './weatherAppDemo.module.css';
 import Image from 'next/image';
 import Link from 'next/link';

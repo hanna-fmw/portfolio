@@ -266,6 +266,70 @@ export default function Home() {
 								PROJECTS */}
 							</p>
 							<p>
+								NEXT.JS / <br />
+								WEB DEVELOPMENT
+							</p>
+						</div>
+						<motion.div
+							className={styles.project}
+							initial={{ translateY: 50 }}
+							whileInView={{ translateY: 0 }}
+							viewport={{ once: true }}
+							transition={{
+								duration: 0.4,
+								ease: 'easeIn',
+							}}>
+							<h1 className={styles.project_heading}>Photo App with Firebase</h1>
+						</motion.div>
+						<p className={` ${styles.project_heading} ${styles.project_subheading}`}>(in progress)</p>
+
+						<div className={styles.btn_wrapper}>
+							<div className={styles.btn_container}>
+								<a href='https://github.com/hanna-fmw/photo-site' target='_blank' rel='noopener noreferrer'>
+									<button className={styles.visit_btn}>
+										Go to Repo
+										<svg width='20' height='20' fill='none' xmlns='http://www.w3.org/2000/svg'>
+											<path d='M13.337 7.845l-7.173 7.173-1.178-1.179 7.172-7.172H5.837V5h9.166v9.167h-1.666V7.845z' fill='#777' />
+										</svg>
+									</button>
+								</a>
+							</div>
+
+							<div className={styles.btn_container}>
+								<Link href='/projects/photoApp'>
+									<button className={styles.visit_btn}>
+										Go to demo
+										<svg width='20' height='20' fill='none' xmlns='http://www.w3.org/2000/svg'>
+											<path d='M13.337 7.845l-7.173 7.173-1.178-1.179 7.172-7.172H5.837V5h9.166v9.167h-1.666V7.845z' fill='#777' />
+										</svg>
+									</button>
+								</Link>
+							</div>
+						</div>
+					</section>
+
+					<aside className={styles.svg_scroll}>
+						<svg viewBox='0 0 100 10' xmlns='http://www.w3.org/2000/svg'>
+							<motion.path
+								initial={{ pathLength: 0 }}
+								whileInView={{ pathLength: 1 }}
+								viewport={{ once: true }}
+								transition={{
+									duration: 3,
+									ease: 'linear',
+								}}
+								d='M 100, 5 L 0, 5' // Start line from right (x = 100) to left side (x = 0)
+							/>
+						</svg>
+					</aside>
+
+					<section className={styles.projects}>
+						<div className={styles.projects_header}>
+							<p>
+								{/* FEATURED <br />
+								PROJECTS */}
+							</p>
+							<p>
 								T3 / <br />
 								WEB DEVELOPMENT
 							</p>
@@ -319,7 +383,7 @@ export default function Home() {
 									duration: 3,
 									ease: 'linear',
 								}}
-								d='M 100, 5 L 0, 5' // Start line from right (x = 100) to left side (x = 0)
+								d='M 0, 5 L 100, 5' // Start line from right (x = 100) to left side (x = 0)
 							/>
 						</svg>
 					</aside>
