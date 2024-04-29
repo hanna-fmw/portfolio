@@ -161,29 +161,30 @@ export default function Home() {
 								SNOWBOARD RETAILER — <br />
 								FRONTEND FOR WEB SHOP
 							</h1>
+
+							<div className={styles.btn_wrapper}>
+								<div className={styles.btn_container}>
+									<a href='https://github.com/hanna-fmw/webshop-snowboards' target='_blank' rel='noopener noreferrer'>
+										<button className={styles.visit_btn}>
+											Go to repo
+											<svg width='20' height='20' fill='none' xmlns='http://www.w3.org/2000/svg'>
+												<path d='M13.337 7.845l-7.173 7.173-1.178-1.179 7.172-7.172H5.837V5h9.166v9.167h-1.666V7.845z' fill='#777' />
+											</svg>
+										</button>
+									</a>
+								</div>
+								<div className={styles.btn_container}>
+									<Link href='/projects/snowboardDemo'>
+										<button className={styles.visit_btn}>
+											Go to demo page
+											<svg width='20' height='20' fill='none' xmlns='http://www.w3.org/2000/svg'>
+												<path d='M13.337 7.845l-7.173 7.173-1.178-1.179 7.172-7.172H5.837V5h9.166v9.167h-1.666V7.845z' fill='#777' />
+											</svg>
+										</button>
+									</Link>
+								</div>
+							</div>
 						</motion.div>
-						<div className={styles.btn_wrapper}>
-							<div className={styles.btn_container}>
-								<a href='https://github.com/hanna-fmw/webshop-snowboards' target='_blank' rel='noopener noreferrer'>
-									<button className={styles.visit_btn}>
-										Go to repo
-										<svg width='20' height='20' fill='none' xmlns='http://www.w3.org/2000/svg'>
-											<path d='M13.337 7.845l-7.173 7.173-1.178-1.179 7.172-7.172H5.837V5h9.166v9.167h-1.666V7.845z' fill='#777' />
-										</svg>
-									</button>
-								</a>
-							</div>
-							<div className={styles.btn_container}>
-								<Link href='/projects/snowboardDemo'>
-									<button className={styles.visit_btn}>
-										Go to demo page
-										<svg width='20' height='20' fill='none' xmlns='http://www.w3.org/2000/svg'>
-											<path d='M13.337 7.845l-7.173 7.173-1.178-1.179 7.172-7.172H5.837V5h9.166v9.167h-1.666V7.845z' fill='#777' />
-										</svg>
-									</button>
-								</Link>
-							</div>
-						</div>
 					</section>
 					<aside className={styles.svg_scroll}>
 						<svg viewBox='0 0 100 10' xmlns='http://www.w3.org/2000/svg'>
@@ -220,31 +221,33 @@ export default function Home() {
 								ease: 'easeIn',
 							}}>
 							<h1 className={styles.project_heading}>Weather App</h1>
-						</motion.div>
-						<div className={styles.btn_wrapper}>
-							<div className={styles.btn_container}>
-								<a href='https://github.com/hanna-fmw/weather-app/' target='_blank' rel='noopener noreferrer'>
-									<button className={styles.visit_btn}>
-										Go to Repo
-										<svg width='20' height='20' fill='none' xmlns='http://www.w3.org/2000/svg'>
-											<path d='M13.337 7.845l-7.173 7.173-1.178-1.179 7.172-7.172H5.837V5h9.166v9.167h-1.666V7.845z' fill='#777' />
-										</svg>
-									</button>
-								</a>
-							</div>
 
-							<div className={styles.btn_container}>
-								<Link href='/projects/weatherAppDemo'>
-									<button className={styles.visit_btn}>
-										Go to demo page
-										<svg width='20' height='20' fill='none' xmlns='http://www.w3.org/2000/svg'>
-											<path d='M13.337 7.845l-7.173 7.173-1.178-1.179 7.172-7.172H5.837V5h9.166v9.167h-1.666V7.845z' fill='#777' />
-										</svg>
-									</button>
-								</Link>
+							<div className={styles.btn_wrapper}>
+								<div className={styles.btn_container}>
+									<a href='https://github.com/hanna-fmw/weather-app/' target='_blank' rel='noopener noreferrer'>
+										<button className={styles.visit_btn}>
+											Go to Repo
+											<svg width='20' height='20' fill='none' xmlns='http://www.w3.org/2000/svg'>
+												<path d='M13.337 7.845l-7.173 7.173-1.178-1.179 7.172-7.172H5.837V5h9.166v9.167h-1.666V7.845z' fill='#777' />
+											</svg>
+										</button>
+									</a>
+								</div>
+
+								<div className={styles.btn_container}>
+									<Link href='/projects/weatherAppDemo'>
+										<button className={styles.visit_btn}>
+											Go to demo page
+											<svg width='20' height='20' fill='none' xmlns='http://www.w3.org/2000/svg'>
+												<path d='M13.337 7.845l-7.173 7.173-1.178-1.179 7.172-7.172H5.837V5h9.166v9.167h-1.666V7.845z' fill='#777' />
+											</svg>
+										</button>
+									</Link>
+								</div>
 							</div>
-						</div>
+						</motion.div>
 					</section>
+
 					<aside className={styles.svg_scroll}>
 						<svg viewBox='0 0 100 10' xmlns='http://www.w3.org/2000/svg'>
 							<motion.path
@@ -280,32 +283,33 @@ export default function Home() {
 								ease: 'easeIn',
 							}}>
 							<h1 className={styles.project_heading}>Photo App with Firebase</h1>
+
+							<p className={` ${styles.project_heading} ${styles.project_subheading}`}>(in progress)</p>
+
+							<div className={styles.btn_wrapper}>
+								<div className={styles.btn_container}>
+									<a href='https://github.com/hanna-fmw/photo-site' target='_blank' rel='noopener noreferrer'>
+										<button className={styles.visit_btn}>
+											Go to Repo
+											<svg width='20' height='20' fill='none' xmlns='http://www.w3.org/2000/svg'>
+												<path d='M13.337 7.845l-7.173 7.173-1.178-1.179 7.172-7.172H5.837V5h9.166v9.167h-1.666V7.845z' fill='#777' />
+											</svg>
+										</button>
+									</a>
+								</div>
+
+								<div className={styles.btn_container}>
+									<Link href='/projects/photoApp'>
+										<button className={styles.visit_btn}>
+											Go to demo
+											<svg width='20' height='20' fill='none' xmlns='http://www.w3.org/2000/svg'>
+												<path d='M13.337 7.845l-7.173 7.173-1.178-1.179 7.172-7.172H5.837V5h9.166v9.167h-1.666V7.845z' fill='#777' />
+											</svg>
+										</button>
+									</Link>
+								</div>
+							</div>
 						</motion.div>
-						<p className={` ${styles.project_heading} ${styles.project_subheading}`}>(in progress)</p>
-
-						<div className={styles.btn_wrapper}>
-							<div className={styles.btn_container}>
-								<a href='https://github.com/hanna-fmw/photo-site' target='_blank' rel='noopener noreferrer'>
-									<button className={styles.visit_btn}>
-										Go to Repo
-										<svg width='20' height='20' fill='none' xmlns='http://www.w3.org/2000/svg'>
-											<path d='M13.337 7.845l-7.173 7.173-1.178-1.179 7.172-7.172H5.837V5h9.166v9.167h-1.666V7.845z' fill='#777' />
-										</svg>
-									</button>
-								</a>
-							</div>
-
-							<div className={styles.btn_container}>
-								<Link href='/projects/photoApp'>
-									<button className={styles.visit_btn}>
-										Go to demo
-										<svg width='20' height='20' fill='none' xmlns='http://www.w3.org/2000/svg'>
-											<path d='M13.337 7.845l-7.173 7.173-1.178-1.179 7.172-7.172H5.837V5h9.166v9.167h-1.666V7.845z' fill='#777' />
-										</svg>
-									</button>
-								</Link>
-							</div>
-						</div>
 					</section>
 
 					<aside className={styles.svg_scroll}>
@@ -344,34 +348,35 @@ export default function Home() {
 								ease: 'easeIn',
 							}}>
 							<h1 className={styles.project_heading}>Web Shop - fashion store</h1>
-						</motion.div>
-						<p className={` ${styles.project_heading} ${styles.project_subheading}`}>Team project (school assignment)</p>
-						<p className={` ${styles.project_heading} ${styles.project_text}`}>
-							Collaborative school project involving a team of UX, frontend and backend students. Built on the T3 Stack.
-						</p>
-						<div className={styles.btn_wrapper}>
-							<div className={styles.btn_container}>
-								<a href='https://github.com/ChasAcademy-Linnea-Svensson/RebelRunway' target='_blank' rel='noopener noreferrer'>
-									<button className={styles.visit_btn}>
-										Go to Repo
-										<svg width='20' height='20' fill='none' xmlns='http://www.w3.org/2000/svg'>
-											<path d='M13.337 7.845l-7.173 7.173-1.178-1.179 7.172-7.172H5.837V5h9.166v9.167h-1.666V7.845z' fill='#777' />
-										</svg>
-									</button>
-								</a>
-							</div>
 
-							<div className={styles.btn_container}>
-								<a href='https://rebel-runway-webshop-oouc4s4mi-chasacademy-linnea-svensson.vercel.app/' target='_blank' rel='noopener noreferrer'>
-									<button className={styles.visit_btn}>
-										Go to site
-										<svg width='20' height='20' fill='none' xmlns='http://www.w3.org/2000/svg'>
-											<path d='M13.337 7.845l-7.173 7.173-1.178-1.179 7.172-7.172H5.837V5h9.166v9.167h-1.666V7.845z' fill='#777' />
-										</svg>
-									</button>
-								</a>
+							<p className={` ${styles.project_heading} ${styles.project_subheading}`}>Team project (school assignment)</p>
+							<p className={` ${styles.project_heading} ${styles.project_text}`}>
+								Collaborative school project involving a team of UX, frontend and backend students. Built on the T3 Stack.
+							</p>
+							<div className={styles.btn_wrapper}>
+								<div className={styles.btn_container}>
+									<a href='https://github.com/ChasAcademy-Linnea-Svensson/RebelRunway' target='_blank' rel='noopener noreferrer'>
+										<button className={styles.visit_btn}>
+											Go to Repo
+											<svg width='20' height='20' fill='none' xmlns='http://www.w3.org/2000/svg'>
+												<path d='M13.337 7.845l-7.173 7.173-1.178-1.179 7.172-7.172H5.837V5h9.166v9.167h-1.666V7.845z' fill='#777' />
+											</svg>
+										</button>
+									</a>
+								</div>
+
+								<div className={styles.btn_container}>
+									<a href='https://rebel-runway-webshop-oouc4s4mi-chasacademy-linnea-svensson.vercel.app/' target='_blank' rel='noopener noreferrer'>
+										<button className={styles.visit_btn}>
+											Go to site
+											<svg width='20' height='20' fill='none' xmlns='http://www.w3.org/2000/svg'>
+												<path d='M13.337 7.845l-7.173 7.173-1.178-1.179 7.172-7.172H5.837V5h9.166v9.167h-1.666V7.845z' fill='#777' />
+											</svg>
+										</button>
+									</a>
+								</div>
 							</div>
-						</div>
+						</motion.div>
 					</section>
 					<aside className={styles.svg_scroll}>
 						<svg viewBox='0 0 100 10' xmlns='http://www.w3.org/2000/svg'>

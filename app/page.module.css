@@ -47,12 +47,12 @@
 	color: #aaa;
 	border: 2px solid #777;
 	border-radius: 45px;
-	padding: 5px 20px;
-	font-size: 1rem;
+	padding: 0.4rem 1rem;
 	text-transform: uppercase;
 	cursor: pointer;
 	overflow: hidden;
 	transition: color 0.3s, background 0.3s;
+	font-size: 0.6rem;
 }
 
 .visit_btn:hover,
@@ -61,6 +61,10 @@
 	color: magenta; */
 	border: 2px solid greenyellow;
 	color: greenyellow;
+}
+
+.visit_btn {
+	padding-bottom: 1.1rem;
 }
 
 .hero_section {
@@ -128,13 +132,13 @@
 .project_heading {
 	font-size: 80px;
 	font-family: var(--font-bebasNeue);
-	line-height: 0.9;
 	padding-top: 3.2rem;
 	padding-bottom: 2.4rem;
 	text-align: right;
 	transition: color 0.3s;
 	width: 100%;
 	cursor: grab;
+	line-height: 0.9;
 }
 
 .project_heading:hover {
@@ -291,13 +295,13 @@
 		top: 1px;
 	}
 	25% {
-		top: 2px;
+		top: 5px;
 	}
 	50% {
-		top: 3px;
+		top: 10px;
 	}
 	75% {
-		top: 2px;
+		top: 5px;
 	}
 	100% {
 		top: 1px;
