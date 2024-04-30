@@ -228,10 +228,10 @@ export default function Home() {
 								ease: 'easeIn',
 							}}>
 							<h1 className={styles.project_heading}>Weather App</h1>
-							<p className={styles.project_subheading}>Next.js, TypeScript, API Calls, Framer Motion, Downshift.js, localStorage</p>
+							<p className={styles.project_subheading}>Next.js, TypeScript, API Calls, localStorage</p>
 							<p className={styles.project_text}>
-								Responsive Next.js and TypeScript app with smooth page transitions and animations. Conditionally displayed background images based on
-								temperature, city filtering in accessible drop-down, automatic sorting and local storage, etc.{' '}
+								Next.js and TypeScript app with responsive layouts. Conditionally displayed background images based on temperature, city filtering in
+								accessible drop-down, automatic sorting, local storage of previous serches, etc.{' '}
 							</p>
 
 							<div className={styles.btn_wrapper}>
@@ -247,14 +247,14 @@ export default function Home() {
 								</div>
 
 								<div className={styles.btn_container}>
-									<Link href='/projects/weatherAppDemo'>
+									<a href='https://https://weather-app-alpha-nine-33.vercel.app/' target='_blank' rel='noopener noreferrer'>
 										<button className={styles.visit_btn}>
-											Go to demo page
+											Go to site
 											<svg width='20' height='20' fill='none' xmlns='http://www.w3.org/2000/svg'>
 												<path d='M13.337 7.845l-7.173 7.173-1.178-1.179 7.172-7.172H5.837V5h9.166v9.167h-1.666V7.845z' fill='#777' />
 											</svg>
 										</button>
-									</Link>
+									</a>
 								</div>
 							</div>
 						</motion.div>
