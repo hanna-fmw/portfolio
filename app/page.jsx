@@ -247,7 +247,7 @@ export default function Home() {
 								</div>
 
 								<div className={styles.btn_container}>
-									<a href='https://https://weather-app-alpha-nine-33.vercel.app/' target='_blank' rel='noopener noreferrer'>
+									<a href='https://weather-app-alpha-nine-33.vercel.app/' target='_blank' rel='noopener noreferrer'>
 										<button className={styles.visit_btn}>
 											Go to site
 											<svg width='20' height='20' fill='none' xmlns='http://www.w3.org/2000/svg'>
