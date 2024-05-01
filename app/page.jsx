@@ -181,14 +181,14 @@ export default function Home() {
 									</a>
 								</div>
 								<div className={styles.btn_container}>
-									<Link href='/projects/snowboardDemo'>
+									<a href='https://webshop-snowboards-nvd24imcr-hannafmws-projects.vercel.app/' target='_blank' rel='noopener noreferrer'>
 										<button className={styles.visit_btn}>
-											Go to demo page
+											Go to site
 											<svg width='20' height='20' fill='none' xmlns='http://www.w3.org/2000/svg'>
 												<path d='M13.337 7.845l-7.173 7.173-1.178-1.179 7.172-7.172H5.837V5h9.166v9.167h-1.666V7.845z' fill='#777' />
 											</svg>
 										</button>
-									</Link>
+									</a>
 								</div>
 							</div>
 						</motion.div>
