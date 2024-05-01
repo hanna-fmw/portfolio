@@ -295,11 +295,11 @@ export default function Home() {
 								ease: 'easeIn',
 							}}>
 							<h1 className={styles.project_heading}>Photo App</h1>
-							<p className={`${styles.project_subheading}`}>Next.js, TypeScript, Firebase, Swiper.js, useContext</p>
+							<p className={`${styles.project_subheading}`}>Next.js, TypeScript, Firebase, Leaflet.js, Swiper.js, useContext</p>
 
 							<p className={`${styles.project_text}`}>
 								Responsive photo app with Admin page to uppload photos to Firebase Storage and display these on the main landing page. Also includes
-								image carousel built with Swiper.js. Based on public Figma design.{' '}
+								Leaflet mapping with zoom and marker popup, image carousel built with Swiper.js, etc.{' '}
 							</p>
 
 							<div className={styles.btn_wrapper}>
