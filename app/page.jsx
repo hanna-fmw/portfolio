@@ -1,9 +1,9 @@
-'use client';
-import { useState } from 'react';
-import styles from './page.module.css';
-import { motion } from 'framer-motion';
-import Marquee from 'react-fast-marquee';
-import Link from 'next/link';
+'use client'
+import { useState } from 'react'
+import styles from './page.module.css'
+import { motion } from 'framer-motion'
+import Marquee from 'react-fast-marquee'
+import Link from 'next/link'
 
 const skills = [
 	{ id: 1, name: 'HTML' },
@@ -17,15 +17,15 @@ const skills = [
 	{ id: 9, name: 'Git & GitHub' },
 	{ id: 10, name: 'Squarespace' },
 	{ id: 11, name: 'UX/UI & Animation (Figma, Framer Motion)' },
-];
+]
 
 export default function Home() {
-	const [open, setOpen] = useState(false);
+	const [open, setOpen] = useState(false)
 
 	const copyToClipboard = () => {
-		setOpen(true);
-		navigator.clipboard.writeText('hanna.hosk@gmail.com');
-	};
+		setOpen(true)
+		navigator.clipboard.writeText('hanna.hosk@gmail.com')
+	}
 
 	return (
 		<>
@@ -181,7 +181,8 @@ export default function Home() {
 									</a>
 								</div>
 								<div className={styles.btn_container}>
-									<a href='https://webshop-snowboards-nvd24imcr-hannafmws-projects.vercel.app/' target='_blank' rel='noopener noreferrer'>
+									{/* <a href='https://webshop-snowboards-nvd24imcr-hannafmws-projects.vercel.app/' target='_blank' rel='noopener noreferrer'> */}
+									<a href='https://webshop-snowboards.vercel.app/' target='_blank' rel='noopener noreferrer'>
 										<button className={styles.visit_btn}>
 											Go to site
 											<svg width='20' height='20' fill='none' xmlns='http://www.w3.org/2000/svg'>
@@ -451,7 +452,7 @@ export default function Home() {
 										}}>
 										{skill.name}
 									</motion.div>
-								);
+								)
 							})}
 						</div>
 					</section>
@@ -527,5 +528,5 @@ export default function Home() {
 				</footer>
 			</main>
 		</>
-	);
+	)
 }
