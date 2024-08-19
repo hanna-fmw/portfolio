@@ -4,9 +4,6 @@
 	margin: 0;
 }
 
-/* I layout.jsx har jag definierat variablerna --font-bebasNeue och
---font-roboto, så att de kan användas direkt som värden för 
-font-family */
 
 html,
 body {

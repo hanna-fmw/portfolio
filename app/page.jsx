@@ -106,9 +106,11 @@ export default function Home() {
 					<div className={styles.about}>
 						<p className={styles.about_paragraph}>
 							<span className={styles.first_word}>About </span>
-							&nbsp;Hi, I&apos;m Hanna, a junior frontend developer with the ambition to eventually become fullstack. I&apos;m very driven and
-							passionate about learning, creative thinking and problem-solving. While currently focusing on frontend technologies, Node.js/Express and
-							basic Database Management, I&apos;m also very excited to learn more about AI and other emerging tools.
+							&nbsp;Hi, I&apos;m Hanna, a junior frontend developer with the ambition to eventually
+							become fullstack. I&apos;m very driven and passionate about learning, creative
+							thinking and problem-solving. While currently focusing on frontend technologies,
+							Node.js/Express and basic Database Management, I&apos;m also very excited to learn
+							more about AI and other emerging tools.
 						</p>
 					</div>
 
@@ -162,31 +164,45 @@ export default function Home() {
 								FRONTEND FOR WEB SHOP
 							</h1>
 							<p className={styles.project_subheading}>
-								Next.js, TypeScript, Zod, React Hook Form, Storybook, useContext, Downshift.js, Framer Motion, localStorage
+								Next.js, TypeScript, Zod, React Hook Form, Storybook, useContext, Downshift.js,
+								Framer Motion, localStorage
 							</p>
 							<p className={styles.project_text}>
-								Frontend for a web shop including features such as routing, filtering, sorting, API-based currency conversion, form validation,
-								animations and visuals, etc. Pure CSS using grid/flexbox for responsiveness and layout purposes.
+								Frontend for a web shop including features such as routing, filtering, sorting,
+								API-based currency conversion, form validation, animations and visuals, etc. Pure
+								CSS using grid/flexbox for responsiveness and layout purposes.
 							</p>
 
 							<div className={styles.btn_wrapper}>
 								<div className={styles.btn_container}>
-									<a href='https://github.com/hanna-fmw/webshop-snowboards' target='_blank' rel='noopener noreferrer'>
+									<a
+										href='https://github.com/hanna-fmw/webshop-snowboards'
+										target='_blank'
+										rel='noopener noreferrer'>
 										<button className={styles.visit_btn}>
 											Go to repo
 											<svg width='20' height='20' fill='none' xmlns='http://www.w3.org/2000/svg'>
-												<path d='M13.337 7.845l-7.173 7.173-1.178-1.179 7.172-7.172H5.837V5h9.166v9.167h-1.666V7.845z' fill='#777' />
+												<path
+													d='M13.337 7.845l-7.173 7.173-1.178-1.179 7.172-7.172H5.837V5h9.166v9.167h-1.666V7.845z'
+													fill='#777'
+												/>
 											</svg>
 										</button>
 									</a>
 								</div>
 								<div className={styles.btn_container}>
 									{/* <a href='https://webshop-snowboards-nvd24imcr-hannafmws-projects.vercel.app/' target='_blank' rel='noopener noreferrer'> */}
-									<a href='https://webshop-snowboards.vercel.app/' target='_blank' rel='noopener noreferrer'>
+									<a
+										href='https://webshop-snowboards.vercel.app/'
+										target='_blank'
+										rel='noopener noreferrer'>
 										<button className={styles.visit_btn}>
 											Go to site
 											<svg width='20' height='20' fill='none' xmlns='http://www.w3.org/2000/svg'>
-												<path d='M13.337 7.845l-7.173 7.173-1.178-1.179 7.172-7.172H5.837V5h9.166v9.167h-1.666V7.845z' fill='#777' />
+												<path
+													d='M13.337 7.845l-7.173 7.173-1.178-1.179 7.172-7.172H5.837V5h9.166v9.167h-1.666V7.845z'
+													fill='#777'
+												/>
 											</svg>
 										</button>
 									</a>
@@ -229,30 +245,45 @@ export default function Home() {
 								ease: 'easeIn',
 							}}>
 							<h1 className={styles.project_heading}>Weather App</h1>
-							<p className={styles.project_subheading}>Next.js, TypeScript, API Calls, localStorage</p>
+							<p className={styles.project_subheading}>
+								Next.js, TypeScript, API Calls, localStorage
+							</p>
 							<p className={styles.project_text}>
-								Next.js and TypeScript app with responsive layouts. Conditionally displayed background images based on temperature, city filtering in
-								accessible drop-down, automatic sorting, local storage of previous serches, etc.{' '}
+								Next.js and TypeScript app with responsive layouts. Conditionally displayed
+								background images based on temperature, city filtering in accessible drop-down,
+								automatic sorting, local storage of previous serches, etc.{' '}
 							</p>
 
 							<div className={styles.btn_wrapper}>
 								<div className={styles.btn_container}>
-									<a href='https://github.com/hanna-fmw/weather-app/' target='_blank' rel='noopener noreferrer'>
+									<a
+										href='https://github.com/hanna-fmw/weather-app/'
+										target='_blank'
+										rel='noopener noreferrer'>
 										<button className={styles.visit_btn}>
 											Go to Repo
 											<svg width='20' height='20' fill='none' xmlns='http://www.w3.org/2000/svg'>
-												<path d='M13.337 7.845l-7.173 7.173-1.178-1.179 7.172-7.172H5.837V5h9.166v9.167h-1.666V7.845z' fill='#777' />
+												<path
+													d='M13.337 7.845l-7.173 7.173-1.178-1.179 7.172-7.172H5.837V5h9.166v9.167h-1.666V7.845z'
+													fill='#777'
+												/>
 											</svg>
 										</button>
 									</a>
 								</div>
 
 								<div className={styles.btn_container}>
-									<a href='https://weather-app-alpha-nine-33.vercel.app/' target='_blank' rel='noopener noreferrer'>
+									<a
+										href='https://weather-app-alpha-nine-33.vercel.app/'
+										target='_blank'
+										rel='noopener noreferrer'>
 										<button className={styles.visit_btn}>
 											Go to site
 											<svg width='20' height='20' fill='none' xmlns='http://www.w3.org/2000/svg'>
-												<path d='M13.337 7.845l-7.173 7.173-1.178-1.179 7.172-7.172H5.837V5h9.166v9.167h-1.666V7.845z' fill='#777' />
+												<path
+													d='M13.337 7.845l-7.173 7.173-1.178-1.179 7.172-7.172H5.837V5h9.166v9.167h-1.666V7.845z'
+													fill='#777'
+												/>
 											</svg>
 										</button>
 									</a>
@@ -296,31 +327,46 @@ export default function Home() {
 								ease: 'easeIn',
 							}}>
 							<h1 className={styles.project_heading}>Photo App</h1>
-							<p className={`${styles.project_subheading}`}>Next.js, TypeScript, Firebase, Leaflet.js, Swiper.js, useContext</p>
+							<p className={`${styles.project_subheading}`}>
+								Next.js, TypeScript, Firebase, Leaflet.js, Swiper.js, useContext
+							</p>
 
 							<p className={`${styles.project_text}`}>
-								Responsive photo app with Admin page to uppload photos to Firebase Storage and display these on the main landing page. Also includes
-								Leaflet mapping with zoom and marker popup, image carousel built with Swiper.js, etc.{' '}
+								Responsive photo app with Admin page to uppload photos to Firebase Storage and
+								display these on the main landing page. Also includes Leaflet mapping with zoom and
+								marker popup, image carousel built with Swiper.js, etc.{' '}
 							</p>
 
 							<div className={styles.btn_wrapper}>
 								<div className={styles.btn_container}>
-									<a href='https://github.com/hanna-fmw/photo-site' target='_blank' rel='noopener noreferrer'>
+									<a
+										href='https://github.com/hanna-fmw/photo-site'
+										target='_blank'
+										rel='noopener noreferrer'>
 										<button className={styles.visit_btn}>
 											Go to Repo
 											<svg width='20' height='20' fill='none' xmlns='http://www.w3.org/2000/svg'>
-												<path d='M13.337 7.845l-7.173 7.173-1.178-1.179 7.172-7.172H5.837V5h9.166v9.167h-1.666V7.845z' fill='#777' />
+												<path
+													d='M13.337 7.845l-7.173 7.173-1.178-1.179 7.172-7.172H5.837V5h9.166v9.167h-1.666V7.845z'
+													fill='#777'
+												/>
 											</svg>
 										</button>
 									</a>
 								</div>
 
 								<div className={styles.btn_container}>
-									<a href='https://photo-site-phi.vercel.app/' target='_blank' rel='noopener noreferrer'>
+									<a
+										href='https://photo-site-phi.vercel.app/'
+										target='_blank'
+										rel='noopener noreferrer'>
 										<button className={styles.visit_btn}>
 											Go to site
 											<svg width='20' height='20' fill='none' xmlns='http://www.w3.org/2000/svg'>
-												<path d='M13.337 7.845l-7.173 7.173-1.178-1.179 7.172-7.172H5.837V5h9.166v9.167h-1.666V7.845z' fill='#777' />
+												<path
+													d='M13.337 7.845l-7.173 7.173-1.178-1.179 7.172-7.172H5.837V5h9.166v9.167h-1.666V7.845z'
+													fill='#777'
+												/>
 											</svg>
 										</button>
 									</a>
@@ -368,26 +414,39 @@ export default function Home() {
 
 							<p className={` ${styles.project_subheading}`}>T3 Stack</p>
 							<p className={` ${styles.project_text}`}>
-								Collaborative school project involving a team of UX, frontend and backend students. Built on the T3 Stack.
+								Collaborative school project involving a team of UX, frontend and backend students.
+								Built on the T3 Stack.
 							</p>
 							<div className={styles.btn_wrapper}>
 								<div className={styles.btn_container}>
-									<a href='https://github.com/ChasAcademy-Linnea-Svensson/RebelRunway' target='_blank' rel='noopener noreferrer'>
+									<a
+										href='https://github.com/ChasAcademy-Linnea-Svensson/RebelRunway'
+										target='_blank'
+										rel='noopener noreferrer'>
 										<button className={styles.visit_btn}>
 											Go to Repo
 											<svg width='20' height='20' fill='none' xmlns='http://www.w3.org/2000/svg'>
-												<path d='M13.337 7.845l-7.173 7.173-1.178-1.179 7.172-7.172H5.837V5h9.166v9.167h-1.666V7.845z' fill='#777' />
+												<path
+													d='M13.337 7.845l-7.173 7.173-1.178-1.179 7.172-7.172H5.837V5h9.166v9.167h-1.666V7.845z'
+													fill='#777'
+												/>
 											</svg>
 										</button>
 									</a>
 								</div>
 
 								<div className={styles.btn_container}>
-									<a href='https://rebel-runway-webshop-oouc4s4mi-chasacademy-linnea-svensson.vercel.app/' target='_blank' rel='noopener noreferrer'>
+									<a
+										href='https://rebel-runway-webshop-oouc4s4mi-chasacademy-linnea-svensson.vercel.app/'
+										target='_blank'
+										rel='noopener noreferrer'>
 										<button className={styles.visit_btn}>
 											Go to site
 											<svg width='20' height='20' fill='none' xmlns='http://www.w3.org/2000/svg'>
-												<path d='M13.337 7.845l-7.173 7.173-1.178-1.179 7.172-7.172H5.837V5h9.166v9.167h-1.666V7.845z' fill='#777' />
+												<path
+													d='M13.337 7.845l-7.173 7.173-1.178-1.179 7.172-7.172H5.837V5h9.166v9.167h-1.666V7.845z'
+													fill='#777'
+												/>
 											</svg>
 										</button>
 									</a>
@@ -413,7 +472,8 @@ export default function Home() {
 				<section className={styles.content_section}>
 					<h2 className={styles.content_title}>Interests</h2>
 					<div className={styles.content_description}>
-						Scrolling through and watching YT videos about Web development... and family, friends, food and wine of course!
+						Scrolling through and watching YT videos about Web development... and family, friends,
+						food and wine of course!
 					</div>
 				</section>
 				<aside className={styles.svg_scroll}>
@@ -470,8 +530,8 @@ export default function Home() {
 						<div className={styles.content_container}>
 							<h2 className={styles.content_title}>What you get...</h2>
 							<p className={styles.content_description}>
-								A passionate and super motivated junior developer with a strong work ethic, who&apos;s just as comfortable collaborating in teams as
-								working independently.
+								A passionate and super motivated junior developer with a strong work ethic,
+								who&apos;s just as comfortable collaborating in teams as working independently.
 								<br />
 								<a href='https://github.com/hanna-fmw' target='_blank' rel='noopener noreferrer'>
 									See my <span className={styles.social_link}>Github</span>
@@ -509,21 +569,16 @@ export default function Home() {
 						</a>
 					</div>
 					<div>
-						<a href='https://www.linkedin.com/in/hanna-jacobsson-hosk-29a64138/' target='_blank' rel='noopener noreferrer'>
+						<a
+							href='https://www.linkedin.com/in/hanna-jacobsson-hosk-29a64138/'
+							target='_blank'
+							rel='noopener noreferrer'>
 							<span className={styles.social_link}>LINKEDIN</span>
 						</a>
 					</div>
 
 					<div>
 						<span className={styles.place}>STOCKHOLM, SWEDEN</span>
-						<div class='time'>
-							<a
-								class='clock24'
-								id='tz24-1625668046-c1125-eyJob3VydHlwZSI6IjI0Iiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIwIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6ImVuIn0='
-								title='time now'
-								target='_blank'
-								rel='noopener noreferrer'></a>
-						</div>
 					</div>
 				</footer>
 			</main>
