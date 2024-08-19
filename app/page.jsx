@@ -122,17 +122,12 @@ export default function Home() {
 						<svg viewBox='0 0 100 10' xmlns='http://www.w3.org/2000/svg'>
 							<motion.path
 								initial={{ pathLength: 0 }}
-								// animate={{ pathLength: 1 }}
 								whileInView={{ pathLength: 1 }}
 								viewport={{ once: true }}
 								transition={{
 									duration: 3,
 									ease: 'linear',
-									// repeat: Infinity,
-									// repeatType: 'loop',
-									// repeatDelay: 2,
 								}}
-								// strokeWidth={0.4}
 								d='M 0, 5 L 100, 5'
 							/>
 						</svg>
@@ -143,7 +138,74 @@ export default function Home() {
 						<div className={styles.projects_header}>
 							<p>
 								FEATURED <br />
-								PROJECTS (4)
+								PROJECTS (5)
+							</p>
+							<p>
+								NEXT.JS / <br />
+								WEB DEVELOPMENT
+							</p>
+						</div>
+						<motion.div
+							className={styles.project}
+							initial={{ translateY: 50 }}
+							whileInView={{ translateY: 0 }}
+							viewport={{ once: true }}
+							transition={{
+								duration: 0.4,
+								ease: 'easeIn',
+							}}>
+							<h1 className={styles.project_heading}>Blog App</h1>
+							<p className={styles.project_subheading}>Next.js 14, TypeScript, Prisma, Supabase</p>
+							<p className={styles.project_text}>
+								Next.js 14 (with App Router and Server Actions) and TypeScript based app using
+								Prisma and Supabase for CRUD functionality with authentication. CSS, Tailwind and
+								Shadcn for styling. Seeding for initial default blog posts, recommended reading
+								based on tags, input form on protected route, drop-down for image selection, etc.{' '}
+							</p>
+
+							<div className={styles.btn_wrapper}>
+								<div className={styles.btn_container}>
+									<a
+										href='https://github.com/hanna-fmw/blog-next14-prisma'
+										target='_blank'
+										rel='noopener noreferrer'>
+										<button className={styles.visit_btn}>
+											Go to Repo
+											<svg width='20' height='20' fill='none' xmlns='http://www.w3.org/2000/svg'>
+												<path
+													d='M13.337 7.845l-7.173 7.173-1.178-1.179 7.172-7.172H5.837V5h9.166v9.167h-1.666V7.845z'
+													fill='#777'
+												/>
+											</svg>
+										</button>
+									</a>
+								</div>
+
+								<div className={styles.btn_container}>
+									<a
+										href='https://blog-next14-prisma.vercel.app/'
+										target='_blank'
+										rel='noopener noreferrer'>
+										<button className={styles.visit_btn}>
+											Go to site
+											<svg width='20' height='20' fill='none' xmlns='http://www.w3.org/2000/svg'>
+												<path
+													d='M13.337 7.845l-7.173 7.173-1.178-1.179 7.172-7.172H5.837V5h9.166v9.167h-1.666V7.845z'
+													fill='#777'
+												/>
+											</svg>
+										</button>
+									</a>
+								</div>
+							</div>
+						</motion.div>
+					</section>
+
+					<section className={styles.projects}>
+						<div className={styles.projects_header}>
+							<p>
+								{/* FEATURED
+								PROJECTS */}
 							</p>
 							<p>
 								NEXT.JS / <br />
@@ -191,7 +253,6 @@ export default function Home() {
 									</a>
 								</div>
 								<div className={styles.btn_container}>
-									{/* <a href='https://webshop-snowboards-nvd24imcr-hannafmws-projects.vercel.app/' target='_blank' rel='noopener noreferrer'> */}
 									<a
 										href='https://webshop-snowboards.vercel.app/'
 										target='_blank'
