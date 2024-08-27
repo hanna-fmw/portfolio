@@ -1,3 +1,22 @@
+# Portfolio
+
+This is my personal portfolio website. The site is built using Next.js and features a responsive design with animated elements.
+
+## Features
+
+- Responsive layout
+- Animated components using Framer Motion
+- Skills and projects showcase
+- Contact information and social links
+
+## Technologies Used
+
+- Next.js
+- React
+- CSS Modules
+- Framer Motion
+- React Fast Marquee
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
