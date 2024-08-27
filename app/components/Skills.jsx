@@ -16,12 +16,13 @@ export default function Skills() {
 							<motion.div
 								key={skill.id}
 								className={styles.skill}
+								// Animation: Skills appear from bottom with a staggered delay
 								initial={{ translateY: 50 }}
 								whileInView={{ translateY: 0 }}
 								viewport={{ once: true }}
 								transition={{
 									duration: 0.4,
-									delay: i * 0.1,
+									delay: i * 0.1, // Staggered delay based on index
 									ease: [0, 0.71, 0.2, 1.01],
 								}}>
 								{skill.name}
@@ -30,6 +31,7 @@ export default function Skills() {
 					})}
 				</div>
 			</section>
+			{/* Additional content sections */}
 			<section className={styles.content_wrapper}>
 				<div className={styles.content_container}>
 					<h2 className={styles.content_title}>What I want...</h2>
