@@ -90,11 +90,10 @@ export default function Home() {
 						/>
 					</section>
 
-					<section className={styles.projects}>
+					{/* <section className={styles.projects}>
 						<div className={styles.projects_header}>
 							<p>
-								{/* FEATURED <br />
-								PROJECTS */}
+								
 							</p>
 							<p>
 								NEXT.JS / <br />
@@ -109,7 +108,7 @@ export default function Home() {
 							siteUrl='https://photo-site-phi.vercel.app/'
 							lineDirection='rtl'
 						/>
-					</section>
+					</section> */}
 				</section>
 				{/* Interests section */}
 				<section className={styles.content_section}>
@@ -130,7 +129,7 @@ export default function Home() {
 								duration: 3,
 								ease: 'linear',
 							}}
-							d='M 0, 5 L 100, 5' // M 0 and L 100 paints the line from left to right; M 100 and L 0 paints the line from right to left
+							d='M 100, 5 L 0, 5' // M 0 and L 100 paints the line from left to right; M 100 and L 0 paints the line from right to left
 						/>
 					</svg>
 				</aside>
