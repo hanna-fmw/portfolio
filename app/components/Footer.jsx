@@ -1,13 +1,13 @@
 import { useState } from 'react'
 import styles from '../page.module.css'
-import Marquee from 'react-fast-marquee'
 
 export default function Footer() {
 	const [open, setOpen] = useState(false)
 
 	const copyToClipboard = () => {
-		setOpen(true)
 		navigator.clipboard.writeText('hanna.hosk@gmail.com')
+		setOpen(true)
+		setTimeout(() => setOpen(false), 2000) // Reset after 2 seconds
 	}
 
 	return (
@@ -16,7 +16,7 @@ export default function Footer() {
 				<div className={styles.email}>
 					<button onClick={copyToClipboard} className={styles.email_btn}>
 						<span className={styles.email_address}>hanna.hosk@gmail.com</span>
-						<span className={styles.to_copy}>Click To Copy</span>
+						<span className={styles.to_copy}>{open ? 'Copied!' : 'Click To Copy'}</span>
 					</button>
 				</div>
 				<div>
