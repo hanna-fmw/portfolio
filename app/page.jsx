@@ -2,7 +2,6 @@
 import { useState } from 'react'
 import styles from './page.module.css'
 import { motion } from 'framer-motion'
-import Marquee from 'react-fast-marquee'
 import Project from './components/Project'
 import Header from './components/Header'
 import Hero from './components/Hero'
@@ -10,23 +9,10 @@ import Skills from './components/Skills'
 import MarqueeSection from './components/MarqueeSection'
 import Footer from './components/Footer'
 
-const skills = [
-	{ id: 1, name: 'HTML' },
-	{ id: 2, name: 'CSS, Tailwind, Shadcn' },
-	{ id: 3, name: 'JavaScript' },
-	{ id: 4, name: 'TypeScript' },
-	{ id: 5, name: 'React & Next.js (App Router)' },
-	{ id: 6, name: 'React Native' },
-	{ id: 7, name: 'Node.js & Express' },
-	{ id: 8, name: 'Prisma, Supabase & Firebase basics' },
-	{ id: 9, name: 'Git & GitHub' },
-	{ id: 10, name: 'Shopify & Squarespace' },
-	{ id: 11, name: 'UX/UI & animation basics (Figma, Framer Motion)' },
-]
-
 export default function Home() {
 	const [open, setOpen] = useState(false)
 
+	// Function to copy email to clipboard
 	const copyToClipboard = () => {
 		setOpen(true)
 		navigator.clipboard.writeText('hanna.hosk@gmail.com')
@@ -38,7 +24,9 @@ export default function Home() {
 				<Header />
 				<Hero />
 				<section>
+					{/* Project sections */}
 					<section className={styles.projects}>
+						{/* Project header */}
 						<div className={styles.projects_header}>
 							<p>
 								FEATURED <br />
@@ -49,6 +37,7 @@ export default function Home() {
 								WEB DEVELOPMENT
 							</p>
 						</div>
+						{/* Individual project components */}
 						<Project
 							title='Blog App'
 							subheading='Next.js 14, TypeScript, Prisma, Supabase'
@@ -122,6 +111,7 @@ export default function Home() {
 						/>
 					</section>
 				</section>
+				{/* Interests section */}
 				<section className={styles.content_section}>
 					<h2 className={styles.content_title}>Interests</h2>
 					<div className={styles.content_description}>
@@ -129,6 +119,7 @@ export default function Home() {
 						food and wine of course!
 					</div>
 				</section>
+				{/* Animated SVG scroll line */}
 				<aside className={styles.svg_scroll}>
 					<svg viewBox='0 0 100 10' xmlns='http://www.w3.org/2000/svg'>
 						<motion.path
@@ -139,7 +130,7 @@ export default function Home() {
 								duration: 3,
 								ease: 'linear',
 							}}
-							d='M 0, 5 L 100, 5' //M 0  and L 100 paints the line from left to right; M 100 and L 0 paints the line from right to left
+							d='M 0, 5 L 100, 5' // M 0 and L 100 paints the line from left to right; M 100 and L 0 paints the line from right to left
 						/>
 					</svg>
 				</aside>
