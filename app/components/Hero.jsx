@@ -58,6 +58,33 @@ export default function Hero() {
 				<div className={styles.wheel}></div>
 			</div>
 
+			<style jsx>{`
+				.portfolio-link {
+					--link-color: #777;
+					display: inline-flex;
+					align-items: center;
+					text-decoration: none;
+					color: var(--link-color);
+					transition: --link-color 0.3s ease;
+					gap: 0.5rem;
+				}
+				.portfolio-link:hover {
+					--link-color: #fff;
+				}
+			`}</style>
+
+			<div style={{ marginTop: '1rem' }}>
+				<a
+					href='https://github.com/hanna-fmw/portfolio'
+					target='_blank'
+					rel='noopener noreferrer'
+					className='portfolio-link'>
+					<span style={{ fontSize: '1rem', textTransform: 'uppercase' }}>GO TO</span>
+					<span style={{ fontSize: '2.5rem', color: 'var(--link-color)' }}>PORTFOLIO</span>
+					<span style={{ fontSize: '1rem', textTransform: 'uppercase' }}>REPO</span>
+				</a>
+			</div>
+
 			<aside className={styles.svg_scroll}>
 				<svg viewBox='0 0 100 10' xmlns='http://www.w3.org/2000/svg'>
 					<motion.path
