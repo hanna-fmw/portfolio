@@ -46,11 +46,18 @@ export default function Hero() {
 			<div className={styles.about}>
 				<p className={styles.about_paragraph}>
 					<span className={styles.first_word}>About </span>
-					&nbsp;Hi, I&apos;m Hanna, a junior frontend developer with the ambition to eventually
-					become fullstack. I&apos;m very driven and passionate about learning, creative thinking
-					and problem-solving. While currently focusing on frontend technologies, Node.js/Express
-					and basic Database Management, I&apos;m also very excited to learn more about AI and other
-					emerging tools.
+					&nbsp;Hi, I&apos;m Hanna, a junior Web Developer motivated by a love for learning and
+					creative problem-solving. My foundation is in JavaScript/TypeScript and Next.js/React, and
+					over the past year I’ve been working on API integrations, automations, and AI-powered
+					workflows and solutions, using tools such as n8n. I’ve also built accessibility and AEO
+					solutions with integrated AI, and gained experience with Webflow (headless CMS) and
+					Shopify. I stay up to date with productivity AI tools and methods, primarily using Cursor
+					and Claude Code with context engineering, experimenting with building AI agents and MCPs,
+					and continuously exploring new technologies and workflows.
+					<br />
+					<br />
+					Note! I will soon update the sample projects and skills sections below with more recent
+					projects.
 				</p>
 			</div>
 
