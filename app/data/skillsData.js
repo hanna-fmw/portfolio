@@ -1,6 +1,6 @@
 export const skills = [
 	{ id: 1, name: 'API Integrations' },
-	{ id: 2, name: 'n8n Automations' },
+	{ id: 2, name: 'Automations (e.g. n8n)' },
 	{ id: 3, name: 'AI-Powered Integrations, Automations & Content Generation' },
 	{ id: 4, name: 'AEO & Accessibility/WCAG' },
 	{ id: 5, name: 'Javascript/TypeScript' },
