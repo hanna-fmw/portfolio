@@ -14,7 +14,7 @@ const roboto = Roboto({
 export const metadata = {
 	title: 'Portfolio',
 	description:
-		'Web/Frontend Developer focusing on API-integration, AI-powered solutions and automations using n8n, taking advantage of new technologies and tools such as MCPs, AI Agents, Cursor, Claude Code and context engineering. Foundational knowledge in React, Next.js, and Tailwind CSS',
+		'Web/Frontend Developer focusing on API-integration, AI-powered solutions and automations using n8n, taking advantage of new technologies and tools such as MCPs, AI Agents, RAG,Cursor, Claude Code and context engineering. Foundational knowledge in React, Next.js, and Tailwind CSS',
 }
 
 export default function RootLayout({ children }) {
