@@ -26,7 +26,7 @@ export default function Header() {
 				<div className={styles.nav_portfolio}>
 					Frontend Developer <br />
 					<div style={{ paddingTop: '2rem' }}>
-						Portfolio / 2023-2024 <br />
+						Portfolio / 2023-2025 <br />
 						(A Work in progress)
 					</div>
 				</div>
