@@ -57,7 +57,10 @@ export default function Hero() {
 					<br />
 					<br />
 					Note! I will soon update the sample projects and skills sections below with more recent
-					projects.
+					projects, including: an accessibility/WCAG solution with Next.js, Supabase, AI summary
+					generation, PDF generation with audit results; Trello board automation collecting all
+					active tasks in Google Sheets; automated alt text field generation using Gemini Vision AI
+					(via n8n from and to Webflow built-in alt text fields); and more.
 				</p>
 			</div>
 
