@@ -23,14 +23,9 @@ export default function Hero() {
 				</span>
 
 				<h1 className={styles.hero_heading}>
-					<span className={styles.hero_hover}>f</span>
-					<span className={styles.hero_hover}>r</span>
-					<span className={styles.hero_hover}>o</span>
-					<span className={styles.hero_hover}>n</span>
-					<span className={styles.hero_hover}>t</span> <br />
+					<span className={styles.hero_hover}>w</span>
 					<span className={styles.hero_hover}>e</span>
-					<span className={styles.hero_hover}>n</span>
-					<span className={styles.hero_hover}>d</span> <br />
+					<span className={styles.hero_hover}>b</span> <br />
 					<span className={styles.hero_hover}>d</span>
 					<span className={styles.hero_hover}>e</span>
 					<span className={styles.hero_hover}>v</span>
