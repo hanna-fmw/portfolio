@@ -45,10 +45,10 @@ export default function Hero() {
 					creative problem-solving. My foundation is in JavaScript/TypeScript and Next.js/React, and
 					over the past year I’ve been working on API integrations, automations, and AI-powered
 					workflows and solutions, using tools such as n8n. I’ve also built accessibility and AEO
-					solutions with integrated AI, and gained experience with Webflow (headless CMS) and
-					Shopify. I stay up to date with productivity AI tools and methods, primarily using Cursor
-					and Claude Code with context engineering, experimenting with building AI agents and MCPs,
-					and continuously exploring new technologies and workflows.
+					solutions with integrated AI, and gained experience with Webflow (particularly the CMS)
+					and Shopify. I stay up to date with productivity AI tools and methods, primarily using
+					Cursor and Claude Code with context engineering, experimenting with AI agents and working
+					with MCPs, and continuously exploring new technologies and workflows.
 					<br />
 					<br />
 					Note! I will soon update the sample projects and skills sections below with more recent
