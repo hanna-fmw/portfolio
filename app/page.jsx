@@ -30,7 +30,7 @@ export default function Home() {
 						<div className={styles.projects_header}>
 							<p>
 								FEATURED <br />
-								PROJECTS (5)
+								PROJECTS (3)
 							</p>
 							<p>
 								NEXT.JS / <br />
